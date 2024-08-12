@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../../tailwind/index.css';
 function IntroSection() {
     return ( 
-        <div>
-            
+        <div className=' h-screen '>
+            introsection
         </div>
      );
 }

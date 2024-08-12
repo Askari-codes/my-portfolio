@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MainHeader from './Components/MainHeader/MainHeader';
 function App() {
   return (
-    <div className="bg-blue-700 h-screen ">
-    something for example
+    <div className=" h-screen bg-portfolio-cloud bg-cover lg:bg-portfolio-cloud bg-cover ">
+      <MainHeader/> 
     </div>
   );
 }

@@ -1,3 +1,28 @@
+@import 'reset.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .socialMediaIcon{
+        font-size: 20px;
+        color:#aab1b8;
+        margin-right: 12px;
+        cursor:pointer
+        
+    }
+}
+.poppins-regular {
+    @apply font-poppins font-normal;
+  }
+  .poppins-medium {
+    @apply font-poppins font-medium;
+  }
+  .poppins-semibold {
+    @apply font-poppins font-semibold;
+  }
+  .poppins-bold {
+    @apply font-poppins font-bold;
+  }
+  
