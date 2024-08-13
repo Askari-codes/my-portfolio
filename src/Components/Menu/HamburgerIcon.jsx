@@ -6,17 +6,17 @@ const HamburgerIcon = ({ isOpen, toggle }) => (
     onClick={toggle}
   >
     <span
-      className={`block w-6 h-0.5 bg-white mb-1 transform transition duration-300 ease-in-out ${
+      className={`block w-6 md:w-8 h-0.5 md:h-1 bg-white mb-1 transform transition duration-300 ease-in-out ${
         isOpen ? 'rotate-45 translate-y-2' : ''
       }`}
     ></span>
     <span
-      className={`block w-6 h-0.5 bg-white mb-1 transition duration-300 ease-in-out ${
+      className={`block w-6 md:w-8 h-0.5 md:h-1 bg-white mb-1 transition duration-300 ease-in-out ${
         isOpen ? 'opacity-0' : ''
       }`}
     ></span>
     <span
-      className={`block w-6 h-0.5 bg-white transition duration-300 ease-in-out ${
+      className={`block w-6 md:w-8 h-0.5 md:h-1 bg-white transition duration-300 ease-in-out ${
         isOpen ? '-rotate-45 -translate-y-2' : ''
       }`}
     ></span>

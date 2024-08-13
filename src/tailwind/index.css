@@ -6,7 +6,7 @@
 
 @layer components{
     .socialMediaIcon{
-        font-size: 20px;
+        font-size: 3rem;
         color:#aab1b8;
         margin-right: 12px;
         cursor:pointer
