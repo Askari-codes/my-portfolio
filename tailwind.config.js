@@ -12,7 +12,8 @@ module.exports = {
       backgroundImage:{
         // 'portfolio': "url('images/stars.jpeg')",
         // 'portfolio-screen':"url(images/stars.jpeg)",
-        'portfolio-cloud':"url(images/cloud.jpg)"
+        'portfolio-cloud':"url(images/cloud.jpg)",
+        'myImage':"url(images/linked_in.jpg)"
       }
     },
   },
