@@ -1,13 +1,15 @@
 import React from 'react';
 
 const HamburgerIcon = ({ isOpen, toggle }) => (
-  <button
-    className="flex lg:hidden flex-col items-center justify-center w-10 h-10 text-white rounded focus:outline-none mr-2"
+  
+    <button
+    className="flex lg:hidden flex-col items-end md:items-center justify-center w-[50%] md:w-10 h-10 text-white rounded focus:outline-none mr-2 mb-2"
     onClick={toggle}
   >
     <span
       className={`block w-6 h-0.5 bg-white mb-1 transform transition duration-300 ease-in-out ${
         isOpen ? 'rotate-45 translate-y-2' : ''
+        
       }`}
     ></span>
     <span
@@ -21,6 +23,7 @@ const HamburgerIcon = ({ isOpen, toggle }) => (
       }`}
     ></span>
   </button>
+  
 );
 
 export default HamburgerIcon;

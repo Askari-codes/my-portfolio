@@ -7,7 +7,7 @@ function SocialMediaIcons({direction}) {
     },[])
     return (
         <div className={`hidden ${direction === 'horizontal' ? 'sm:flex lg:hidden justify-end w-[200px]' : 'lg:flex'}`}>
-            {IconsData.map((item)=><Icon className='socialMediaIcon' key={item} name={item}/>)}
+            {IconsData.map((item)=><Icon className='text-[1.5rem] text-[#aab1b8] mr-[12px] mb-[1rem]' key={item} name={item}/>)}
         </div>
       );
 }

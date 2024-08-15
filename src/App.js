@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <div className="relative h-screen bg-black">
-        <BackgroundAnimation />
+        {/* <BackgroundAnimation /> */}
         <Sidebar />
         <TopHeader />
         <div className="relative z-10">
