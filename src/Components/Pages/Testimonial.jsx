@@ -1,7 +1,7 @@
 import React from 'react';
 function Testimonial() {
     return ( 
-        <h1>Testimonial</h1>
+        <h1 className='flex h-screen bg-white'>Testimonial</h1>
      );
 }
 

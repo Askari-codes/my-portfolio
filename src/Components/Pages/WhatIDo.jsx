@@ -1,7 +1,7 @@
 import React from 'react';
 function WhatIDo() {
     return ( 
-        <h1>WhatIDo</h1>
+        <h1 className='flex h-screen bg-white'>WhatIDo</h1>
      );
 }
 

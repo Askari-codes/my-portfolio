@@ -1,7 +1,7 @@
 import React from 'react';
 function Resume() {
     return ( 
-        <h1>Resume</h1>
+        <h1 className='flex h-screen bg-white'>Resume</h1>
      );
 }
 

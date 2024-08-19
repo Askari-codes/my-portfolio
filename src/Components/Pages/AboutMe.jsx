@@ -2,7 +2,7 @@ import React from 'react';
 function AboutMe() {
     
     return (  
-        <h1>AboutMe</h1>
+        <h1 className='flex h-screen bg-white'>AboutMe</h1>
     );
 }
 
