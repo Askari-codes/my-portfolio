@@ -24,7 +24,7 @@ function TopHeader() {
   }, [isDesktop]);
 
   return (
-    <header className={`flex items-center justify-between mi p-4 bg-black ${isDesktop ? 'hidden' : 'flex'}`}>
+    <header className={` z-10  flex items-center justify-between mi p-4  ${isDesktop ? 'hidden' : 'flex'}`}>
       <h1 className=" text-white w-[50%] text-base xs:text-lg md:text-xl poppins  leading-none">
         Mohammad Askari
       </h1>

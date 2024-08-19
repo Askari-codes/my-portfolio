@@ -9,19 +9,17 @@ import Contact from './Components/Pages/Contact';
 import TopHeader from './Components/MainHeader/TopHeader/TopHeader';
 import useMediaQuery from './hooks/useMediaQuery';
 import { useEffect } from 'react';
+import BackgroundAnimation from './Assests/animations/BackgroundAnimation'
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  useEffect(()=>{
-console.log('is desktop',isDesktop);
-  },[isDesktop])
-
   return (
     <Router>
       <div className={`h-screen  grid ${isDesktop ? 'grid-cols-[250px_1fr]' : 'grid-cols-1 grid-rows-[auto_1fr]'}`}>
+        <BackgroundAnimation/>
         
         {isDesktop? <Sidebar />:<TopHeader/>}
-        <div className="p-4 overflow-hidden ">
+        <div className="p-4 overflow-hidden  ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />
