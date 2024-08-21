@@ -9,14 +9,18 @@ import Contact from './Components/Pages/Contact';
 import TopHeader from './Components/MainHeader/TopHeader/TopHeader';
 import useMediaQuery from './hooks/useMediaQuery';
 import { useEffect } from 'react';
-import BackgroundAnimation from './Assests/animations/BackgroundAnimation'
+import BackgroundAnimation from './Assets/animations/BackgroundAnimation'
+import VideoBackground from './Components/VideoBackground';
+import AppProvider from './Components/context/AppProvider';
 
 function App() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   return (
-    <Router>
-      <div className={`h-screen  grid ${isDesktop ? 'grid-cols-[250px_1fr]' : 'grid-cols-1 grid-rows-[auto_1fr]'}`}>
-        <BackgroundAnimation/>
+    <AppProvider>
+      <Router>
+      <div className={`relative bg-black h-screen  grid ${isDesktop ? 'grid-cols-[250px_1fr]' : 'grid-cols-1 grid-rows-[auto_1fr]'}`}>
+        {/* <BackgroundAnimation/> */}
+        <VideoBackground/>
         
         {isDesktop? <Sidebar />:<TopHeader/>}
         <div className="p-4 overflow-hidden  ">
@@ -31,6 +35,7 @@ function App() {
         </div>
       </div>
     </Router>
+    </AppProvider>
   );
 }
 

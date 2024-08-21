@@ -1,0 +1,63 @@
+:root {
+    --color-dark-blue: #002148;
+    --color-deep-navy: #002B5C;
+    --color-teal: #008080;
+    --color-cyan: #00FFFF;
+  
+    --color-white: #FFFFFF;
+    --color-light-gray: #D3D3D3;
+  
+    --bg-top-header: var(--color-dark-blue);
+    --bg-dropdown: var(--color-deep-navy);
+    --bg-sidebar: var(--color-dark-blue);
+    
+    --text-color-primary: var(--color-cyan);
+    --text-color-secondary: var(--color-light-gray);
+    --text-color-active: var(--color-white);
+    --text-color-hover: var(--color-teal);
+  
+    --border-color-gray: #A9A9A9;
+  
+    --bg-active: var(--color-teal);
+    --bg-hover: var(--color-deep-navy);
+  }
+
+  .header {
+    background-color: var(--bg-top-header); 
+    color: var(--text-color-primary); 
+  }
+  
+  .hamburger-icon, .social-media-icons {
+    color: var(--text-color-secondary); 
+  }
+  
+  .dropdown-menu {
+    background-color: var(--bg-dropdown); 
+    color: var(--text-color-primary); 
+  }
+  .dropdown-menu.active
+  {
+    color: var(--text-color-active); 
+    background-color: var(--bg-active); 
+  }
+  
+  .menu-item {
+    color: var(--text-color-secondary); 
+  }
+  
+  .menu-item:hover {
+    color: var(--text-color-hover); 
+    background-color: var(--bg-hover);
+  }
+  
+  .menu-item.active {
+    color: var(--text-color-active); 
+    background-color: var(--bg-active); 
+  }
+
+  .sidebar {
+    background-color: var(--bg-sidebar);
+  }
+  
+  
+  

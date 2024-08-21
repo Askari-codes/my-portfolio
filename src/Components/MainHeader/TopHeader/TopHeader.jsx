@@ -4,37 +4,37 @@ import SocialMediaIcons from '../../Icons/SocialMediaIcons';
 import HamburgerIcon from '../../Menu/HamburgerIcon';
 import { layoutConfig, navigationConfig } from '../../../Layout/layout';
 import useMediaQuery from '../../../hooks/useMediaQuery';
+import useAppContext from '../../../hooks/useAppContext';
 
 function TopHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const {isOpen,toggleMenu} = useAppContext()
   const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   const handleNavigationItemClick = () => {
-    setIsOpen(false);
+    toggleMenu(false);
   };
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
+   toggleMenu(!isOpen)
 
   useEffect(() => {
     if (isDesktop) {
-      setIsOpen(false); // Close the menu if switching to desktop view
+      toggleMenu(false); 
     }
   }, [isDesktop]);
 
   return (
-    <header className={` z-10  flex items-center justify-between mi p-4  ${isDesktop ? 'hidden' : 'flex'}`}>
-      <h1 className=" text-white w-[50%] text-base xs:text-lg md:text-xl poppins  leading-none">
+    <header className={` flex items-center justify-between p-4 bg-[#001F3F] opacity-95  ${isDesktop ? 'hidden' : 'flex'}`}>
+      <h1 className=" w-[50%] text-base xs:text-lg md:text-xl text-[#00FFFF] opacity-95 poppins  leading-none">
         Mohammad Askari
       </h1>
       <SocialMediaIcons direction={layoutConfig.topHeader} />
-      <HamburgerIcon isOpen={isOpen} toggle={toggleMenu} />
+      <HamburgerIcon isOpen={isOpen}  />
       {isOpen && (
         <NavigationMenu
           type="header"
           navigationPosition={navigationConfig.mobile}
-          closeMenu={handleNavigationItemClick}
+          closeMenu={toggleMenu(false)}
           handleNavigationItems={handleNavigationItemClick}
           isOpen={isOpen}
         />

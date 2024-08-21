@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import useAppContext from '../../hooks/useAppContext';
 
-const HamburgerIcon = ({ isOpen, toggle }) => (
+const HamburgerIcon = () => {
   
-    <button
-    className="flex lg:hidden flex-col items-end  justify-center w-[5%]  text-white rounded focus:outline-none  "
-    onClick={toggle}
+  const {isOpen,toggleMenu} = useAppContext()
+  
+  return(
+<button
+    className="flex lg:hidden flex-col items-end text-[#FFFFFF]  justify-center w-[5%] opacity-95  rounded focus:outline-none  "
+    onClick={()=>toggleMenu(isOpen)}
   >
     <span
       className={`block  w-6 h-0.5 bg-white mb-1 transform transition duration-300 ease-in-out ${
@@ -14,7 +18,7 @@ const HamburgerIcon = ({ isOpen, toggle }) => (
     ></span>
     <span
       className={`block w-6 h-0.5 bg-white mb-1 transition duration-300 ease-in-out ${
-        isOpen ? 'opacity-0' : ''
+        isOpen ? 'rotate-45 translate-y-2 hidden' : ''
       }`}
     ></span>
     <span
@@ -25,5 +29,7 @@ const HamburgerIcon = ({ isOpen, toggle }) => (
   </button>
   
 );
+}
+    
 
 export default HamburgerIcon;

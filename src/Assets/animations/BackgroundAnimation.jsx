@@ -5,7 +5,7 @@ import frontend_animation from './frontend_animation.json'
 
 const BackgroundAnimation = () => {
     return (
-      <div className="absolute inset-0 z-0 h-full w-full bg-black">
+      <div className="absolute inset-0 z-0 h-full w-full ">
         <Lottie animationData={stars} loop={true} className="w-full h-full" />
       </div>
     );
