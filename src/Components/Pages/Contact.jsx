@@ -1,8 +1,10 @@
 import React from 'react';
+import useAppContext from '../../hooks/useAppContext';
 function Contact() {
-    return ( 
-        <h1 className='flex h-screen bg-white'>Contact</h1>
-     );
+    const { isOpen } = useAppContext()
+    return (
+        <h1 className={`page ${isOpen ? '' : 'opacity-90'}  `}>Contact</h1>
+    );
 }
 
 export default Contact;

@@ -10,7 +10,6 @@ export const iconMap = {
 const Icon = ({ name, className }) => {
     const IconComponent = iconMap[name]
     if (!IconComponent) {
-        console.log('no icon found');
         return null;
     }
     return <IconComponent className={className} />

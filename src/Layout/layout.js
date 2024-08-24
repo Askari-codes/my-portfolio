@@ -1,9 +1,9 @@
 export const layoutConfig = {
-    topHeader: 'horizontal',
+    header: 'horizontal',
     sidebar: 'vertical'
   };
 
   export const navigationConfig ={
-    mobile:'TopHeader',
-    screen:'SideBar'
+    mobile:'header',
+    desktop:'sidebar'
   }

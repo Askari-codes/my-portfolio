@@ -1,8 +1,10 @@
 import React from 'react';
+import useAppContext from '../../hooks/useAppContext';
 function Resume() {
-    return ( 
-        <h1 className='flex h-screen bg-white'>Resume</h1>
-     );
+    const { isOpen, } = useAppContext()
+    return (
+        <h1 className={`page ${isOpen ? '' : 'opacity-90'}  `}>Resume</h1>
+    );
 }
 
 export default Resume;

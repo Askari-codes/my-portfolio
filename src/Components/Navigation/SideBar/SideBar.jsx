@@ -1,28 +1,29 @@
 import React from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons';
 import myPhoto from '../../../tailwind/images/myPhoto.jpg';
-import NavigationMenu from '../../Menu/NavigationMenu';
-import { layoutConfig, navigationConfig } from '../../../Layout/layout';
+import Navigation from '../Navigation';
+import { Profile_Name } from '../../../Data/Data';
 
-const Sidebar = () => {
+const Sidebar = ({ type }) => {
+
   return (
-    <aside className="sidebar flex flex-col justify-between w-64 h-full fixed lg:relative">
+    <aside className="hidden lg:sidebar lg:flex flex-col justify-between w-64 h-full fixed lg:relative">
       <div className="my-8 flex flex-col items-center">
         <img
           src={myPhoto}
-          alt="Mohammad Askari"
+          alt={Profile_Name}
           className="w-36 h-36 rounded-full border-4 border-[#3f8c8c]"
         />
         <div className="text-[20px] text-[#1fa1a1] poppins-medium mt-1">
-          Mohammad Askari
+          {Profile_Name}
         </div>
       </div>
-      <NavigationMenu
-        type="sidebar"
-        navigationPosition={navigationConfig.screen}
+      <Navigation
+        type={type}
+        navigationPosition={type}
         isOpen={true}
       />
-      <SocialMediaIcons direction={layoutConfig.sidebar} />
+      <SocialMediaIcons type={type} />
     </aside>
   );
 };

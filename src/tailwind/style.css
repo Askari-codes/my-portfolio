@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --color-dark-blue: #002148;
     --color-deep-navy: #002B5C;
     --color-teal: #008080;
@@ -53,11 +53,9 @@
   .menu-item.active {
     color: var(--text-color-active); 
     background-color: var(--bg-active); 
-  }
+  } */
 
-  .sidebar {
-    background-color: var(--bg-sidebar);
-  }
+  
   
   
   

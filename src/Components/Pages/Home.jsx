@@ -2,15 +2,9 @@ import React, { useState, useEffect } from 'react';
 import useAppContext from '../../hooks/useAppContext';
 
 function Home() {
-    const {isOpen,closeMenu} =useAppContext()
-   const onClicklHandler = ()=>{
-    closeMenu()
-   }
-   
+    const { isOpen, } = useAppContext()
     return (
-
-        <div className={`flex h-screen text-xl text-white text-y ${isOpen?'':'opacity-90'}  `}
-        onClick={onClicklHandler}
+        <div className={`page ${isOpen ? '' : 'opacity-90'}  `}
         >
             this is home
         </div>

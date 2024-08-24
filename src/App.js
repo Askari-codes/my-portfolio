@@ -1,28 +1,19 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './Components/MainHeader/SideBar/SideBar';
-import Home from './Components/Pages/Home';
-import AboutMe from './Components/Pages/AboutMe';
-import WhatIDo from './Components/Pages/WhatIDo';
-import Resume from './Components/Pages/Resume';
-import Testimonial from './Components/Pages/Testimonial';
-import Contact from './Components/Pages/Contact';
-import TopHeader from './Components/MainHeader/TopHeader/TopHeader';
-import useMediaQuery from './hooks/useMediaQuery';
-import { useEffect } from 'react';
-import BackgroundAnimation from './Assets/animations/BackgroundAnimation'
-import VideoBackground from './Components/VideoBackground';
-import AppProvider from './Components/context/AppProvider';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Components/Pages/Home";
+import AboutMe from "./Components/Pages/AboutMe";
+import WhatIDo from "./Components/Pages/WhatIDo";
+import Resume from "./Components/Pages/Resume";
+import Testimonial from "./Components/Pages/Testimonial";
+import Contact from "./Components/Pages/Contact";
+import VideoBackground from "./Components/VideoBackground";
+import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
 
 function App() {
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
   return (
-    <AppProvider>
-      <Router>
-      <div className={`relative bg-black h-screen  grid ${isDesktop ? 'grid-cols-[250px_1fr]' : 'grid-cols-1 grid-rows-[auto_1fr]'}`}>
-        {/* <BackgroundAnimation/> */}
-        <VideoBackground/>
-        
-        {isDesktop? <Sidebar />:<TopHeader/>}
+    <Router>
+      <div className="relative bg-black h-screen  grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr]">
+        <VideoBackground />
+        <NavigationWrapper />
         <div className="p-4 overflow-hidden  ">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,7 +26,6 @@ function App() {
         </div>
       </div>
     </Router>
-    </AppProvider>
   );
 }
 
