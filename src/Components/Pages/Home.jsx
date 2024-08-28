@@ -95,7 +95,7 @@ const Home = () => {
                 ))}
             </motion.div>
         </div>
-    );
+     );
 }
 
 export default Home;
