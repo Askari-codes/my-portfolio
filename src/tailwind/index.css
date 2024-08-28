@@ -6,109 +6,76 @@
 @import "style.css";
 
 :root {
-  --color-dark-blue: #002148;
-  --color-deep-navy: #002B5C;
-  --color-teal: #008080;
-  --color-cyan: #00FFFF;
+  --color-dark-background: #1a1a1a;
+  --color-highlight: #0b84ed;
+  --color-accent: #3f9dee;
+  --color-contrast-accent: #32a852;
 
-  --color-white: #FFFFFF;
-  --color-light-gray: #D3D3D3;
+  --color-white: #ffffff;
+  --color-light-gray: #bebaba;
 
-  --bg-top-header: var(--color-dark-blue);
-  --bg-dropdown: var(--color-deep-navy);
-  --bg-sidebar: var(--color-dark-blue);
-  
-  --text-color-primary: var(--color-cyan);
+  --bg-main: var(--color-dark-background);
+  --bg-sidebar: var(--color-dark-background);
+  --bg-header: var(--color-dark-background);
+  --bg-hover: var(#0077cc);
+  --bg-active: var(--color-highlight);
+
+  --text-color-primary: var(--color-white);
   --text-color-secondary: var(--color-light-gray);
-  --text-color-active: var(--color-white);
-  --text-color-hover: var(--color-teal);
+  --text-color-highlight: var(--color-highlight);
 
-  --border-color-gray: #A9A9A9;
-
-  --bg-active: var(--color-teal);
-  --bg-hover: var(--color-deep-navy);
-}
-/* .header {
-  
-} */
-
-/* .hamburger-icon, .social-media-icons {
-  color: var(--text-color-secondary); 
+  --border-color-default: #333333;
+  --border-color-active: var(--color-accent);
 }
 
-.dropdown-menu {
-  background-color: var(--bg-dropdown); 
-  color: var(--text-color-primary); 
+h1 {
+  font-weight: 600;
 }
-.dropdown-menu.active
-{
-  color: var(--text-color-active); 
-  background-color: var(--bg-active); 
-}
-
-.menu-item {
-  color: var(--text-color-secondary); 
-}
-
-.menu-item:hover {
-  color: var(--text-color-hover); 
-  background-color: var(--bg-hover);
-} */
-
 
 
 
 @layer components {
-  .socialMediaIcon {
-    font-size: 1.5rem;
-    color: #aab1b8;
-    margin-right: 12px;
-  }
   .navigation-sidebar {
     @apply flex flex-col w-full items-center justify-start;
   }
-  .navigation-sidebar-item{
-    @apply flex justify-center w-full py-4 px-2 text-xl; 
-    color: var(--text-color-secondary); 
+  .navigation-sidebar-item {
+    @apply flex justify-center w-full py-4 px-2 text-xl;
+    color: var(--text-color-secondary);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  .navigation-sidebar-item:hover {
+    color: var(--color-white);
+    background-color: var(--bg-hover);
   }
   .navigation-sidebar-item.active {
-    
-    color: var(--text-color-active); 
-    background-color: var(--bg-active); 
+    color: var(--text-color-active);
+    background-color: var(--bg-active);
+    border-left: 4px solid var(--border-color-active);
   }
-  .sidebar{
-    background-color: var(--bg-sidebar)
+  .sidebar {
+    background-color: var(--bg-sidebar);
   }
-  
 
-  .navigation-header{
+  .navigation-header {
     @apply flex flex-col w-full h-full items-start justify-start lg:hidden;
-    
   }
   .navigation-header-item {
-    @apply flex justify-start w-full p-4 text-xl opacity-95;
-    color:var(--text-color-primary) ;
-    background-color: var(--bg-dropdown);
+    @apply flex justify-start w-full p-4 text-xl;
+    color: var(--text-color-secondary);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-  .navigation-header-item:hover{
-    @apply opacity-95;
-    color: var(--text-color-hover);
-  }
-  .navigation-header-item.active{
-    @apply  opacity-95;
-    color:var(--text-color-secondary);
-    background-color: var(--bg-top-header);
-
-  }
-  .navigation-header-item.active:hover{
-    background-color: var(--bg-active);
-    color:var(--text-color-active)
-  }
-  .page{
-    @apply flex h-screen text-xl  ;
+  .navigation-header-item:hover {
     color: var(--color-white);
   }
+  .navigation-header-item.active {
+    color: var(--text-color-highlight);
+  }
 
+  .page {
+    @apply flex h-screen w-screen;
+    color: var(--text-color-highlight);
+  }
 }
 
 .poppins-regular {

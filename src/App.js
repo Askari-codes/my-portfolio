@@ -7,14 +7,15 @@ import Testimonial from "./Components/Pages/Testimonial";
 import Contact from "./Components/Pages/Contact";
 import VideoBackground from "./Components/VideoBackground";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
+import BackgroundAnimation from './Assets/animations/BackgroundAnimation'
 
 function App() {
   return (
     <Router>
-      <div className="relative bg-black h-screen  grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr]">
+      <div className="relative bg-black h-screen grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr]">
         <VideoBackground />
         <NavigationWrapper />
-        <div className="p-4 overflow-hidden  ">
+        <div className="p-4 overflow-hidden h-screen w-full  ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />

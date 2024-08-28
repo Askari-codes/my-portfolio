@@ -6,7 +6,8 @@ module.exports = {
   ],
   theme: {
     screens:{
-      'xs':'420px',
+      'xxs':'320px',
+      'xs':'480px',
       ...defaultTheme.screens
       
     },
@@ -20,7 +21,8 @@ module.exports = {
         // 'portfolio-screen':"url(images/stars.jpeg)",
         'portfolio-cloud':"url(images/cloud.jpg)",
         'myImage':"url(images/linked_in.jpg)"
-      }
+      },
+      
     },
   },
   plugins: [],

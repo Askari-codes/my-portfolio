@@ -7,7 +7,7 @@ const HamburgerIcon = () => {
 
   return (
     <button
-      className="flex lg:hidden flex-col items-end text-[#FFFFFF]  justify-center w-[5%] opacity-95  rounded focus:outline-none  "
+      className="flex lg:hidden flex-col items-end text-[var(text-color-primary)]  justify-center w-[5%] opacity-95  rounded focus:outline-none  "
       onClick={() => toggleMenu(isOpen)}
     >
       <span

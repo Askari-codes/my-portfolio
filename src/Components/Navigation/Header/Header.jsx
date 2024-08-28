@@ -10,10 +10,10 @@ function Header({ type }) {
 
   return (
     <header
-      className={` bg-[#001F3F] opacity-95 lg:hidden ${isOpen ? 'flex flex-col' : 'flex items-center justify-between'}`}
+      className={` bg-[var(--bg-header)] opacity-80 lg:hidden ${isOpen ? 'flex flex-col' : 'flex items-center justify-between'}`}
     >
       <div className="flex items-center justify-between w-full p-4">
-        <h1 className="w-[50%] text-base xs:text-lg md:text-xl text-[#00FFFF] opacity-95 poppins leading-none">
+        <h1 className="w-[50%] text-base xs:text-lg md:text-xl text-[var(--text-color-highlight)] opacity-95 poppins leading-none">
           {Profile_Name}
         </h1>
         <SocialMediaIcons type={type} />

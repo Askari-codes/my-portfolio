@@ -18,7 +18,7 @@ function Navigation({ type }) {
             key={index}
             to={item.path}
             className={`${type === 'header'
-              ? `navigation-header-item ${isActive ? 'active' : ''} ${item.label === 'Contact' ? '' : 'border-b'}`
+              ? `navigation-header-item ${isActive ? 'active' : ''} ${item.label === 'Contact' ? '' : 'border-b border-[var(--color-accent)]'}`
               : `navigation-sidebar-item ${isActive ? 'active ' : ''}`
               }`}
             onClick={closeMenu} 
