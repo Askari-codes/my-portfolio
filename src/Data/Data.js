@@ -1,4 +1,7 @@
-export const IconsData = ["facebook", "twitter", "linkedin", "github"];
+export const IconsData = [
+  { name: "linkedin", href: "https://www.linkedin.com/in/mohammad-askarii/" },
+  { name: "github", href: "https://github.com/askari-fahlyani" },
+];
 
 export const menuItemsData = [
   { label: "Home", path: "/", isActive: true },

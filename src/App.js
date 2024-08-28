@@ -7,12 +7,24 @@ import Testimonial from "./Components/Pages/Testimonial";
 import Contact from "./Components/Pages/Contact";
 import VideoBackground from "./Components/VideoBackground";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
-import BackgroundAnimation from './Assets/animations/BackgroundAnimation'
+import useAppContext from "./hooks/useAppContext";
 
 function App() {
+  const { isOpen, closeMenu } = useAppContext();
+  const handleClick = () => {
+    if (isOpen) {
+      closeMenu();
+    }
+  };
+
   return (
     <Router>
-      <div className="relative bg-black h-screen grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr]">
+      <div
+        className={`relative  h-screen ${
+          isOpen ? "flex flex-col" : "grid"
+        }  grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr] `}
+        onClick={handleClick}
+      >
         <VideoBackground />
         <NavigationWrapper />
         <div className="p-4 overflow-hidden h-screen w-full  ">

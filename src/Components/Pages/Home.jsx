@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Home = () => {
+
     const container = {
         hidden: { opacity: 0 },
         visible: {
@@ -15,63 +16,58 @@ const Home = () => {
     };
 
     const item = {
-      fristLine : {
-        hidden: { opacity: 0.6 },
-        visible: { 
-            opacity: 1, 
-            y: 0,
-            scale: 1.5,
-            transition: {
-                repeat: Infinity,            
-                repeatType: "reverse", 
-                duration: 0.5,         
+        firstLine: {
+            initial: { opacity: 1 },
+            exit: { opacity: 1 },
+            hidden: { opacity: 1 },
+            visible: {
+                opacity: 1,
+                y: 0,
+            }
+        },
+        secondLine: {
+            hidden: { opacity: 0.1 },
+            visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 2,
+
+                }
+            }
+        },
+        thirdLine: {
+            hidden: { opacity: 0 },
+            visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 1,
+                }
             }
         }
-      },
-      secondLine : {
-        hidden: { opacity: 0.3 },
-        visible: { 
-            opacity: 1, 
-            y: 0,
-            scale: 1.5,
-            transition: {
-                repeat: Infinity,            
-                repeatType: "reverse", 
-                duration: 0.5,         
-            }
-        }
-      },
-      thirdLine : {
-        hidden: { opacity: 0.1 },
-        visible: { 
-            opacity: 1, 
-            y: 0,
-            scale: 1.5,
-            transition: {
-                repeat: Infinity,            
-                repeatType: "reverse", 
-                duration: 0.5,         
-            }
-        }
-      }
     };
 
     return (
-        <div className="flex flex-col justify-center items-center h-full w-full"> 
+        <div className="flex flex-col justify-center items-center h-full w-full">
             <motion.div
-                className=" xxs:text-3xl xs:text-4xl md:text-5xl xl:text-6xl font-bold text-center text-[var(--color-accent)]"
+                className="xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-center text-[var(--color-accent)]"
                 variants={container}
-                initial="hidden"
-                animate="visible"
+                initial='visible'
+                animate='visible'
             >
                 {Array.from("I'm Mohammad Askari").map((char, index) => (
-                    <motion.span key={index} variants={item.fristLine}>
+                    <motion.span key={index} variants={item.firstLine}>
                         {char}
                     </motion.span>
                 ))}
             </motion.div>
             <motion.div
-                className=" xxs:text-2xl xs:text-3xl md:text-4xl xl:text-5xl text-center text-3xl  text-[var(--text-color-primary)]"
+                className="p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-[var(--text-color-primary)]"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -83,7 +79,7 @@ const Home = () => {
                 ))}
             </motion.div>
             <motion.div
-                className=" xxs:text-xl xs:text-2xl md:text-3xl xl:text-4xl text-center text-2xl  text-[var(--text-color-primary)]"
+                className="p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-[var(--text-color-primary)]"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -95,8 +91,7 @@ const Home = () => {
                 ))}
             </motion.div>
         </div>
-     );
+    );
 }
 
 export default Home;
-

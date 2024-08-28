@@ -6,7 +6,7 @@ function SocialMediaIcons({ type }) {
 
     return (
         <div className={`${type === navigationConfig.mobile ? 'flex lg:hidden justify-end w-[45%] mr-2' : 'lg:flex justify-center p-4 '}`}>
-            {IconsData.map((item) => <Icon className='text-base xs:text-lg text-[--text-color-primary]  opacity-95 md:text-xl  m-2   ' key={item} name={item} />)}
+            {IconsData.map((item) => <Icon className='text-base xs:text-lg text-[--text-color-primary]  opacity-95 md:text-xl  m-1   ' key={item} name={item.name} href={item.href} />)}
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { TiSocialFacebook as facebook, TiSocialTwitter as twitter, TiSocialLinkedin as linkedin, TiSocialGithub as github } from "react-icons/ti";
 
 export const iconMap = {
@@ -7,12 +7,24 @@ export const iconMap = {
     linkedin,
     github
 }
-const Icon = ({ name, className }) => {
-    const IconComponent = iconMap[name]
+
+const Icon = ({ name, className, href }) => {
+    const IconComponent = iconMap[name];
     if (!IconComponent) {
         return null;
     }
-    return <IconComponent className={className} />
+
+    const iconElement = <IconComponent className={className} />;
+
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+                {iconElement}
+            </a>
+        );
+    }
+
+    return iconElement;
 }
 
 export default Icon;
