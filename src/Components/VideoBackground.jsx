@@ -1,12 +1,11 @@
 import React from 'react';
-import background from '../Assets/Videos/background.mov'
-
+import background from '../Assets/Videos/background.mov';
 
 const VideoBackground = () => {
   return (
-    <div className="absolute inset-0 h-full w-full  overflow-hidden">
+    <div className="absolute inset-0 h-full w-full z-0 ">
       <video
-        className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute inset-0 w-full h-full object-cover"
         src={background}
         autoPlay
         loop
@@ -17,3 +16,4 @@ const VideoBackground = () => {
 };
 
 export default VideoBackground;
+

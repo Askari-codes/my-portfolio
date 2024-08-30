@@ -12,6 +12,8 @@ function NavigationWrapper() {
 
     useEffect(() => {
         if (isDesktop) {
+            console.log('its desktop mode');
+            
             closeMenu()
         }
     }, [isDesktop])

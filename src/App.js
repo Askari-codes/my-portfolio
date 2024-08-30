@@ -1,16 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
 import Home from "./Components/Pages/Home";
 import AboutMe from "./Components/Pages/AboutMe";
 import WhatIDo from "./Components/Pages/WhatIDo";
 import Resume from "./Components/Pages/Resume";
 import Testimonial from "./Components/Pages/Testimonial";
 import Contact from "./Components/Pages/Contact";
-import VideoBackground from "./Components/VideoBackground";
-import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
 import useAppContext from "./hooks/useAppContext";
+import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
 
 function App() {
   const { isOpen, closeMenu } = useAppContext();
+
   const handleClick = () => {
     if (isOpen) {
       closeMenu();
@@ -18,27 +18,31 @@ function App() {
   };
 
   return (
-    <Router>
-      <div
-        className={`relative  h-screen ${
-          isOpen ? "flex flex-col" : "grid"
-        }  grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[250px_1fr] `}
-        onClick={handleClick}
-      >
-        <VideoBackground />
+    <div onClick={handleClick} className="relative w-full h-full">
+      <div className="lg:grid lg:grid-cols-[250px_1fr] lg:h-screen w-full h-full">
         <NavigationWrapper />
-        <div className="p-4 overflow-hidden h-screen w-full  ">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-me" element={<AboutMe />} />
-            <Route path="/what-i-do" element={<WhatIDo />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/testimonial" element={<Testimonial />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <main className="w-full h-full overflow-x-hidden overflow-y-auto">
+          <section id="home" className="min-h-screen w-full">
+            <Home />
+          </section>
+          <section id="about-me" className="min-h-screen w-full">
+            <AboutMe />
+          </section>
+          <section id="what-i-do" className="min-h-screen w-full">
+            <WhatIDo />
+          </section>
+          <section id="resume" className="min-h-screen w-full">
+            <Resume />
+          </section>
+          <section id="testimonial" className="min-h-screen w-full">
+            <Testimonial />
+          </section>
+          <section id="contact" className="min-h-screen w-full">
+            <Contact />
+          </section>
+        </main>
       </div>
-    </Router>
+    </div>
   );
 }
 

@@ -27,10 +27,19 @@
   --border-color-default: #333333;
   --border-color-active: var(--color-accent);
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+ 
+}
 h1 {
   font-weight: 600;
 }
+
 
 
 

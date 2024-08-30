@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import VideoBackground from '../VideoBackground';
 
 const Home = () => {
-
     const container = {
         hidden: { opacity: 0 },
         visible: {
@@ -34,7 +34,6 @@ const Home = () => {
                     repeat: Infinity,
                     repeatType: "loop",
                     duration: 2,
-
                 }
             }
         },
@@ -53,9 +52,10 @@ const Home = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center h-full w-full">
+        <div className="relative flex flex-col items-center justify-center h-screen w-full">
+            <VideoBackground />
             <motion.div
-                className="xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-center text-[var(--color-accent)]"
+                className="text-center xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-accent)]"
                 variants={container}
                 initial='visible'
                 animate='visible'
