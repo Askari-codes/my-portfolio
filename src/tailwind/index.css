@@ -24,7 +24,8 @@
   --text-color-secondary: var(--color-light-gray);
   --text-color-highlight: var(--color-highlight);
 
-  --border-color-default: #333333;
+  --border-color-default: rgb(51, 51, 51);
+  -border-cloro-default-opacity:hsla(0, 0%, 20%,0.1);
   --border-color-active: var(--color-accent);
 }
 *,
@@ -39,16 +40,21 @@ html, body {
 h1 {
   font-weight: 600;
 }
+@layer utilities {
+  .border-information {
+    border-bottom: 1px solid rgba(160, 155, 147, 0.5)
+  }
+}
 
 
 
 
 @layer components {
   .navigation-sidebar {
-    @apply flex flex-col w-full items-center justify-start;
+    @apply flex flex-col w-full h-[60%] shrink justify-center;
   }
   .navigation-sidebar-item {
-    @apply flex justify-center w-full py-4 px-2 text-xl;
+    @apply flex justify-center shrink w-full py-4 px-2 text-xl;
     color: var(--text-color-secondary);
     margin-bottom: 0.5rem;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -67,18 +73,22 @@ h1 {
   }
 
   .navigation-header {
-    @apply flex flex-col w-full h-full items-start justify-start lg:hidden;
+    @apply flex flex-col w-full h-full items-start justify-start lg:hidden ;
+    
   }
   .navigation-header-item {
     @apply flex justify-start w-full p-4 text-xl;
     color: var(--text-color-secondary);
+    background-color: var(--bg-header);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .navigation-header-item:hover {
+    @apply text-[var(--color-white)];
     color: var(--color-white);
+    color: red;
   }
   .navigation-header-item.active {
-    color: var(--text-color-highlight);
+    background-color: red
   }
 
   .page {

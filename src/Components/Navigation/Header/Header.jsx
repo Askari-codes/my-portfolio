@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons.jsx';
 import HamburgerIcon from '../../Icons/HamburgerIcon.jsx';
 import useAppContext from '../../../hooks/useAppContext.js';
@@ -6,11 +6,11 @@ import Navigation from '../Navigation.jsx';
 import { Profile_Name } from '../../../Data/Data.js';
 
 function Header({ type }) {
-  const { isOpen } = useAppContext();
+  const { isOpen,isScrolled } = useAppContext();
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-10 h-16 bg-[var(--bg-header)] opacity-80 w-fu ${isOpen ? 'flex flex-col' : 'flex items-center justify-between '}`}
+      className={`fixed top-0 left-0 right-0 z-10 h-16 bg-[var(--bg-header)] ${isScrolled?'opacity-100':'opacity-80'}  ${isOpen ? 'flex flex-col' : 'flex items-center justify-between '}`}
     >
       <div className="flex items-center justify-between w-full p-4">
         <h1 className="text-[15px] w-[50%] xs:text-lg md:text-xl text-[var(--text-color-highlight)] opacity-95 poppins leading-none">
@@ -20,9 +20,9 @@ function Header({ type }) {
         <HamburgerIcon />
       </div>
       {isOpen && (
-        <div className="mt-4 w-full">
+        
           <Navigation type={type} />
-        </div>
+        
       )}
     </header>
   );

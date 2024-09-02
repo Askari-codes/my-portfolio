@@ -1,8 +1,13 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { motion } from 'framer-motion';
 import VideoBackground from '../VideoBackground';
 
 const Home = () => {
+
+ const handleScroll =()=>{
+    console.log('scroll');
+    
+ }
     const container = {
         hidden: { opacity: 0 },
         visible: {
@@ -52,7 +57,10 @@ const Home = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center h-screen w-full">
+        <div 
+        onScroll={handleScroll}
+        
+        className="relative flex flex-col items-center justify-center h-screen w-full">
             <VideoBackground />
             <motion.div
                 className="text-center xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-accent)]"

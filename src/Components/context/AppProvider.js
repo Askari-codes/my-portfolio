@@ -8,9 +8,11 @@ function AppProvider({ children }) {
     const toggleMenu = () => setIsOpen((prev) => !prev);
     const closeMenu = () => setIsOpen(false);
     const updatePath = (path) => setCurrentPath(path);
+    const [isScrolled, setIsScrolled] = useState(false);
+    
 
     return (
-        <AppContext.Provider value={{ isOpen,setIsOpen, toggleMenu, closeMenu, updatePath }}>
+        <AppContext.Provider value={{ isOpen,setIsOpen, toggleMenu, closeMenu, updatePath,isScrolled,setIsScrolled }}>
             {children}  
         </AppContext.Provider>
     );

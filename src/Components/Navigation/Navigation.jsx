@@ -9,7 +9,7 @@ function Navigation({ type }) {
   const { closeMenu } = useAppContext();
   const linkHandler = (e)=>{
     closeMenu()
-    e.preventDefault()
+    // e.preventDefault()
   }
   return (
     <div className={`${type === 'header' ? 'navigation-header' : 'navigation-sidebar'}`}>

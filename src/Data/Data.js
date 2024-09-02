@@ -13,3 +13,12 @@ export const menuItemsData = [
 ];
 
 export const Profile_Name = "Mohammad Askari";
+
+export const myPersonalInformation = [
+  { label: 'Email', value: 'askari.fahlyani@gmail.com' },
+  { label: 'Age', value: '33' },
+  { label: 'From', value: 'Utrecht' },
+  { label: 'Experience', value: '3+ Years' },
+  { label: 'Name', value: 'Mohammad Askari' }
+];
+

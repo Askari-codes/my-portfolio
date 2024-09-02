@@ -4,12 +4,9 @@ import Icon from './Icon';
 import { navigationConfig } from '../../Layout/layout.js';
 
 function SocialMediaIcons({ type }) {
-    useEffect(()=>{
-        console.log(type===navigationConfig.mobile);
-        
-    },[type])
+   
     return (
-        <div className={`flex  space-x-4 ${type === navigationConfig.mobile ? 'xxs:pr-2  justify-end w-[45%] ' : 'lg:flex w-full justify-center '} `}>
+        <div className={`flex  space-x-4 ${type === navigationConfig.mobile ? 'xxs:pr-2  justify-end w-[45%] ' :' h-[10%] items-center lg:flex w-full justify-center '} `}>
             {IconsData.map((item) => (
                 <Icon
                     className="text-base xs:text-lg text-[--text-color-primary] opacity-95 md:text-xl"
