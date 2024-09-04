@@ -20,7 +20,7 @@ function NavigationWrapper() {
 
     return (
         <div>
-            {isDesktop ? <Sidebar type={navigationConfig.desktop} /> : <Header type={navigationConfig.mobile} />}
+            {isDesktop ? <Sidebar  type={navigationConfig.desktop} /> : <Header  type={navigationConfig.mobile} />}
         </div>
     )
 }

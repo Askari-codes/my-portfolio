@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Home from "./Components/Pages/Home";
 import AboutMe from "./Components/Pages/About-Me/AboutMe";
 import WhatIDo from "./Components/Pages/WhatIDo";
@@ -9,7 +9,8 @@ import useAppContext from "./hooks/useAppContext";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
 
 function App() {
-  const { isOpen, closeMenu,setIsScrolled } = useAppContext();
+  const { isOpen, closeMenu, setIsScrolled,sectionRefs } = useAppContext();
+  
   const scrollContainerRef = useRef(null);
 
   const handleScroll = () => {
@@ -22,8 +23,9 @@ function App() {
       }
     }
   };
+
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;    
+    const scrollContainer = scrollContainerRef.current;
     if (scrollContainer) {
       scrollContainer.addEventListener("scroll", handleScroll);
       return () => {
@@ -31,7 +33,7 @@ function App() {
       };
     }
   }, []);
- 
+
   const handleClick = () => {
     if (isOpen) {
       closeMenu();
@@ -41,27 +43,27 @@ function App() {
   return (
     <div onClick={handleClick} className="relative w-full h-full">
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:h-screen w-full h-full">
-        <NavigationWrapper />
+        <NavigationWrapper sectionRefs={sectionRefs} /> 
         <main
           ref={scrollContainerRef}
           className="w-full h-screen overflow-x-hidden overflow-y-auto"
         >
-          <section id="home" className="min-h-screen w-full">
+          <section ref={sectionRefs.home} id="home" className="min-h-screen w-full">
             <Home />
           </section>
-          <section id="about-me" className=" ">
+          <section ref={sectionRefs.aboutMe} id="aboutMe" className="">
             <AboutMe />
           </section>
-          <section id="what-i-do" className="min-h-screen w-full">
+          <section ref={sectionRefs.whatIDo} id="whatIDo" className="min-h-screen w-full">
             <WhatIDo />
           </section>
-          <section id="resume" className="min-h-screen w-full">
+          <section ref={sectionRefs.resume} id="resume" className="min-h-screen w-full">
             <Resume />
           </section>
-          <section id="testimonial" className="min-h-screen w-full">
+          <section ref={sectionRefs.testimonial} id="testimonial" className="min-h-screen w-full">
             <Testimonial />
           </section>
-          <section id="contact" className="min-h-screen w-full">
+          <section ref={sectionRefs.contact} id="contact" className="min-h-screen w-full">
             <Contact />
           </section>
         </main>
