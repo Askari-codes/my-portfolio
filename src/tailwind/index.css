@@ -9,16 +9,18 @@
   --color-dark-background: #1a1a1a;
   --color-highlight: #0b84ed;
   --color-accent: #3f9dee;
-  --color-contrast-accent: #32a852;
 
   --color-white: #ffffff;
   --color-light-gray: #bebaba;
+  --color-page-content:hsla(0, 0%, 100%, .75);
 
   --bg-main: var(--color-dark-background);
-  --bg-sidebar: var(--color-dark-background);
+  --bg-sidebar: rgba(1, 0, 0, 0.906);
   --bg-header: var(--color-dark-background);
   --bg-hover: var(#0077cc);
   --bg-active: var(--color-highlight);
+  /* --bg-aboutme:#2C3E50
+  --bg-WhatIDo:var(#4A6572); */
 
   --text-color-primary: var(--color-white);
   --text-color-secondary: var(--color-light-gray);
@@ -36,6 +38,7 @@
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
  
 }
 h1 {

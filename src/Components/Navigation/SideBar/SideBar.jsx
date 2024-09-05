@@ -6,7 +6,7 @@ import { Profile_Name } from '../../../Data/Data';
 
 const Sidebar = ({ type }) => {
   return (
-    <aside className="fixed top-0 left-0 flex flex-col w-[250px] h-full min-h-full bg-[var(--bg-sidebar)] z-10 overflow-auto">
+    <aside className="fixed top-0 left-0 flex flex-col w-[250px] h-full min-h-full bg-[#24303A]  z-10 overflow-auto">
       <div className="my-8 flex flex-col items-center h-[20%] justify-center">
         <img
           src={myPhoto}

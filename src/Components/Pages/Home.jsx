@@ -4,10 +4,6 @@ import VideoBackground from '../VideoBackground';
 
 const Home = () => {
 
- const handleScroll =()=>{
-    console.log('scroll');
-    
- }
     const container = {
         hidden: { opacity: 0 },
         visible: {
@@ -58,8 +54,6 @@ const Home = () => {
 
     return (
         <div 
-        onScroll={handleScroll}
-        
         className="relative flex flex-col items-center justify-center h-screen w-full">
             <VideoBackground />
             <motion.div
