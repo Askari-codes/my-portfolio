@@ -37,10 +37,11 @@ export const aboutMeContent = {
                         highest standard. My experience as a frontend developer has equipped me with the skills to turn creative ideas
                         into functional and dynamic websites`,
   },
+  partThree: `I love working closely with clients to bring their ideas to life. I believe that the best results come from open communication and collaboration. Whether it's brainstorming new features or tweaking designs, I enjoy making the process as smooth and enjoyable as possible. Plus, I'm always learning and keeping up with the latest trends, so I can bring fresh ideas to every project.`,
 };
 
 export const whatIDoContent = {
-  pageBackgroundTitle: "Services",
+  pageBackgroundTitle: "SERVICES",
   pageTitle: "What I Do",
   services: [
     {
@@ -88,3 +89,49 @@ export const whatIDoContent = {
   ],
 };
 
+export const resumeContent = {
+  resumeTitle: {
+    myEdjucation: "My Edjucation",
+    myExperience: "My Experience",
+  },
+  pageBackgroundTitle: "SUMMARY",
+  pageTitle: "Resume",
+  workExperiences: [
+    {
+      title: "Front-end Developer - Chargoon",
+      date: "2021-2023",
+      content: `Collaborated with teams to design, develop, and maintain responsive web applications using React JS. Participated in agile processes, including sprint planning and retrospectives. Conducted code reviews and provided feedback to ensure code quality. Integrated RESTful APIs for seamless front-end and back-end communication. Managed state efficiently with Redux and Context API for optimal performance.`,
+    },
+    {
+      title: "Achievements - Chargoon",
+      date: "2021-2023",
+      content: `Increased team productivity by 20% in completed story points. Reduced bugs by 15%, ensuring better software quality and smoother user experiences. Stayed current with industry trends and best practices. Contributed to overall project success by continuously improving my skills and knowledge, delivering consistently high-quality outcomes for clients and stakeholders.`,
+    },
+    {
+      title: "Technologies Used - Chargoon",
+      date: "2021-2023",
+      content: `Utilized React JS, Redux, and Context API to develop scalable web applications. Integrated RESTful APIs to ensure seamless communication between front-end and back-end systems. Worked within agile methodologies, contributing to project delivery. Focused on performance optimization and state management, ensuring smooth and efficient functionality throughout the development process.`,
+    },
+  ],
+  education: [
+    {
+      title: "Front-end Developer - Mapsa Bootcamp",
+      date: "2020 -2021",
+      content: `Assisted in the development of React components and user interfaces. Worked on state management and UI/UX design tasks. Gained hands-on experience in developing web applications. Participated in various stages of front-end development, ensuring responsiveness and functionality. Contributed to collaborative projects that implemented modern front-end development best practices.`,
+    },
+    {
+      title: "Achievements - Mapsa Bootcamp",
+      date: "2020 -2021",
+      content: `Mastered modern JavaScript (ES6+), applying features like arrow functions, destructuring, and async/await. Developed strong debugging skills, resolving issues in React applications. Gained insights into React best practices and methodologies. Applied these skills to build efficient, user-friendly web applications. Improved development workflows and implemented practical solutions during training.`
+    },
+    {
+      title: "Technologies Used - Mapsa Bootcamp",
+      date: "2020 -2021",
+      content: `Worked extensively with React JS, JavaScript (ES6+), HTML, and CSS. Applied Redux for state management and focused on UI/UX design integration. Leveraged modern front-end technologies to create dynamic, responsive web applications that improved the overall user experience. Ensured effective state management and functional design in every project.`,
+    },
+  ],
+  language: {
+    title: "Languages",
+    content: ["English - Upper Intermediate", "Native Language"],
+  },
+};
