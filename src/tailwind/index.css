@@ -11,6 +11,7 @@
   --color-highlight-dark: #0f68b5;
   --color-accent: #3f9dee;
   --color-dark-slate:#2C373E;
+  --color-soft-slate:#374047;
 
   --color-white: #ffffff;
   --color-light-gray: #bebaba;
@@ -64,15 +65,15 @@ h1 {
     margin-bottom: 0.5rem;
     transition: color 0.3s ease, background-color 0.3s ease;
   }
-  .navigation-sidebar-item:hover {
-    color: var(--color-white);
+  /* .navigation-sidebar-item:hover {
+    color:var(--color-highlight);
     background-color: var(--bg-hover);
   }
   .navigation-sidebar-item.active {
     color: var(--text-color-active);
     background-color: var(--bg-active);
     border-left: 4px solid var(--border-color-active);
-  }
+  } */
   .sidebar {
     background-color: var(--bg-sidebar);
   }
