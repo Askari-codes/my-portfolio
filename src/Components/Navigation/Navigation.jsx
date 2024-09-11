@@ -5,10 +5,6 @@ import useAppContext from '../../hooks/useAppContext';
 function Navigation({ type }) {
   const { closeMenu, sectionRefs } = useAppContext();
   const [activeSection, setActiveSection] = useState('');
-  useEffect(()=>{
-console.log('active section',activeSection);
-
-  },[activeSection])
 
   const handleLinkClick = (section) => {
     closeMenu();

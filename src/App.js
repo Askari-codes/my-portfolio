@@ -3,7 +3,7 @@ import Home from "./Components/Pages/Home";
 import AboutMe from "./Components/Pages/About-Me/AboutMe";
 import WhatIDo from "./Components/Pages/WhatIDo/WhatIDo";
 import Resume from "./Components/Pages/Resume/Resume";
-import Testimonial from "./Components/Pages/Testimonial";
+import Testimonial from "./Components/Pages/Testimonial/Testimonial";
 import Contact from "./Components/Pages/Contact";
 import useAppContext from "./hooks/useAppContext";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
