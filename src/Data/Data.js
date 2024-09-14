@@ -171,14 +171,14 @@ export const testimonialContent = {
       name: 'Shahin Azedi',
       jobRole: 'Product Owner',
       image: shahin,  
-      testimonial: 'I had the pleasure of working with Mohammad for almost a year at Chargoon. As a frontend developer, he consistently delivered high-quality work and tackled challenges with ease.Mohammad is also a great team player. He communicated well, collaborated smoothly with the team, and always made sure we were aligned on our goals. His positive attitude and willingness to help made a big difference in our projects.I highly recommended Mohammad for any future role. He would be a great asset to any team.'
+      testimonial: 'Hardworking and logical, Mohammad is one of my most capable colleagues. If an organization is seeking someone who is dedicated to their work and brings creativity to the table '
     },
     {
       id: 3,
       name: 'Masoud Aqaei',
       jobRole: 'Senior Frontend Engineer',
       image: arghun,  
-      testimonial: 'Mohammad demonstrated strong growth as a junior frontend developer. His eagerness to learn and ability to grasp complex concepts quickly made him a valuable member of our frontend team. I look forward to seeing his continued success in the field.'
+      testimonial: 'Mohammad demonstrated strong growth as a junior frontend developer. His eagerness to learn and ability to grasp complex concepts quickly made him a valuable member of our frontend team. I look forward to seeing his continued success in the field'
     }
   ]
 }

@@ -1,20 +1,27 @@
 import { useState, useEffect } from "react";
 
 function useMediaQuery(query) {
-  const [mathes, setMathes] = useState(window.matchMedia(query).matches);
-  
+  const [matches, setMatches] = useState(window.matchMedia(query).matches); // Fix typo from "mathes" to "matches"
+
   useEffect(() => {
     const mediaQuery = window.matchMedia(query);
     const handleMediaChange = (event) => {
-      setMathes(event.matches);
+      setMatches(event.matches);
     };
+
+    // Add event listener
     mediaQuery.addEventListener("change", handleMediaChange);
 
+    // Check on mount
+    setMatches(mediaQuery.matches);
+
+    // Cleanup event listener on unmount
     return () => {
       mediaQuery.removeEventListener("change", handleMediaChange);
     };
-  });
-  return mathes;
+  }, [query]); // Add query as a dependency to run when query changes
+
+  return matches;
 }
 
 export default useMediaQuery;
