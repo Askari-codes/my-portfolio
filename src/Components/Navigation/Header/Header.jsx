@@ -16,7 +16,7 @@ function Header({ type }) {
         <h1 className="text-[15px] w-[50%] xs:text-lg md:text-xl text-[var(--text-color-highlight)] opacity-95 poppins leading-none">
           {Profile_Name}
         </h1>
-        <SocialMediaIcons type={type} />
+        <SocialMediaIcons  className={`flex  space-x-4  xxs:pr-2  justify-end w-[45%]  `} />
         <HamburgerIcon />
       </div>
       {isOpen && (

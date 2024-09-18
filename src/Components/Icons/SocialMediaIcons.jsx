@@ -1,22 +1,21 @@
-import React, { useEffect } from 'react';
-import { IconsData } from '../../Data/Data.js';
+// SocialMediaIcons.jsx
+import React from 'react';
+import { IconsData } from '../../Data/Data';
 import Icon from './Icon';
-import { navigationConfig } from '../../Layout/layout.js';
 
-function SocialMediaIcons({ type }) {
-   
-    return (
-        <div className={`flex  space-x-4 ${type === navigationConfig.mobile ? 'xxs:pr-2  justify-end w-[45%] ' :' h-[10%] items-center lg:flex w-full justify-center '} `}>
-            {IconsData.map((item) => (
-                <Icon
-                    className="text-base xs:text-lg text-[--text-color-primary] opacity-95 md:text-xl"
-                    key={item.name}
-                    name={item.name}
-                    href={item.href}
-                />
-            ))}
-        </div>
-    );
+function SocialMediaIcons({ className }) {
+  return (
+    <div className={className}>
+      {IconsData.map((item) => (
+        <Icon
+          className="text-2xl hover:text-gray-200 transition-colors duration-300"
+          key={item.name}
+          name={item.name}
+          href={item.href}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default SocialMediaIcons;

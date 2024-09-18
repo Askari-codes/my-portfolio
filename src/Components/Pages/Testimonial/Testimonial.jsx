@@ -43,7 +43,7 @@ function Testimonial() {
       : testimonialContent.colleagues;
 
   return (
-    <div className="bg-[#303a43] min-h-screen text-[var(--text-color-secondary)] font-[poppins]">
+    <div className="bg-[#192031] min-h-screen text-[var(--text-color-secondary)] font-[poppins]">
       <PageBackground
         pageBackgroundTitle={testimonialContent.pageBackgroundTitle}
         pageTitle={testimonialContent.pageTitle}

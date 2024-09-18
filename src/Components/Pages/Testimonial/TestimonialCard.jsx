@@ -31,7 +31,7 @@ function TestimonialCard({
             onClick={onCardClick}
             style={{ cursor: isCollapsible ? 'pointer' : 'default' }}
             className={`${isExpanded ? 'lg:w-[90%]' : 'lg:w-[45%]'
-                } min-h-[180px] mt-10 flex flex-col justify-center bg-[var(--color-dark-slate)] text-justify p-4`}
+                } p-8 mt-10 flex flex-col justify-center bg-[var(--color-dark-slate)] text-justify `}
         >
             <div className="image-part flex gap-5">
                 <img className="rounded-full w-12 h-12" src={image} alt={`${name}'s avatar`} />
@@ -40,7 +40,7 @@ function TestimonialCard({
                     <div>{jobRole}</div>
                 </div>
             </div>
-            <div className="mt-3 transition-all duration-300">
+            <div className="mt-3 transition-all duration-300 text-xl">
                 {renderTestimonialText()}
             </div>
         </div>

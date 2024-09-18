@@ -6,54 +6,50 @@
 @import "style.css";
 
 :root {
-  --color-dark-background: #1a1a1a;
-  --color-highlight: #0b84ed;
-  --color-highlight-dark: #0f68b5;
-  --color-accent: #3f9dee;
-  --color-dark-slate:#2C373E;
-  --color-soft-slate:#374047;
+  --color-primary: #2b6cb0;
+  --color-primary-light: #5a9bd8;
+  --color-secondary: #1a365d;
+  --color-accent: #90b2e6;
+  --color-teal: #5a7d7c;
+  --color-green: #0fb2aa;
+
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #ffffff;
+
+  --color-background: #f0f4f8;
+  --color-sidebar-bg: var(--color-primary);
+
+  --color-border: #cbd5e0;
+  --color-placeholder: #a0aec0;
 
   --color-white: #ffffff;
-  --color-light-gray: #bebaba;
-  --color-page-content:hsla(0, 0%, 100%, .75);
 
-  --bg-main: var(--color-dark-background);
-  --bg-sidebar: rgba(1, 0, 0, 0.906);
-  --bg-header: var(--color-dark-background);
-  --bg-hover: var(#0077cc);
-  --bg-active: var(--color-highlight);
-  
-
-  --text-color-primary: var(--color-white);
-  --text-color-secondary: var(--color-light-gray);
-  --text-color-highlight: var(--color-highlight);
-
-  --border-color-default: rgb(51, 51, 51);
-  -border-cloro-default-opacity:hsla(0, 0%, 20%,0.1);
-  --border-color-active: var(--color-accent);
+  --color-success: #805ad5;
+  --color-error: #e53e3e;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 64px;
- 
 }
 h1 {
   font-weight: 600;
 }
 @layer utilities {
   .border-information {
-    border-bottom: 1px solid rgba(160, 155, 147, 0.5)
+    border-bottom: 1px solid rgba(160, 155, 147, 0.5);
   }
 }
 
-
-
+@layer components {
+}
 
 @layer components {
   .navigation-sidebar {
@@ -65,22 +61,12 @@ h1 {
     margin-bottom: 0.5rem;
     transition: color 0.3s ease, background-color 0.3s ease;
   }
-  /* .navigation-sidebar-item:hover {
-    color:var(--color-highlight);
-    background-color: var(--bg-hover);
-  }
-  .navigation-sidebar-item.active {
-    color: var(--text-color-active);
-    background-color: var(--bg-active);
-    border-left: 4px solid var(--border-color-active);
-  } */
   .sidebar {
     background-color: var(--bg-sidebar);
   }
 
   .navigation-header {
-    @apply flex flex-col w-full h-full items-start justify-start lg:hidden ;
-    
+    @apply flex flex-col w-full h-full items-start justify-start lg:hidden;
   }
   .navigation-header-item {
     @apply flex justify-start w-full p-4 text-xl;
@@ -94,12 +80,15 @@ h1 {
     color: red;
   }
   .navigation-header-item.active {
-    background-color: red
+    background-color: red;
   }
 
   .page {
     @apply flex h-screen w-screen;
     color: var(--text-color-highlight);
+  }
+  .emailBox-input {
+    @apply mt-1  w-full bg-[var(--color-white)] text-[var(--color-text-primary)] border-[1px] border-[var(--color-border)] text-[1rem]  rounded  py-2 px-3 focus:border-[var(--color-primary)]   focus:outline-none;
   }
 }
 
@@ -116,4 +105,4 @@ h1 {
   @apply font-poppins font-bold;
 }
 
-/* flex flex-col w-full items-center justify-start */
+

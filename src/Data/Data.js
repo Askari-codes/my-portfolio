@@ -1,6 +1,7 @@
-import shahin from '../tailwind/images/shahin.jpeg'
-import arezoo from '../tailwind/images/arezoo.jpeg'
-import arghun from '../tailwind/images/arghun.jpeg'
+import shahin from "../tailwind/images/shahin.jpeg";
+import arezoo from "../tailwind/images/arezoo.jpeg";
+import arghun from "../tailwind/images/arghun.jpeg";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 export const IconsData = [
   { name: "linkedin", href: "https://www.linkedin.com/in/mohammad-askarii/" },
   { name: "github", href: "https://github.com/askari-fahlyani" },
@@ -16,6 +17,8 @@ export const menuItemsData = [
 ];
 
 export const Profile_Name = "Mohammad Askari";
+
+export const My_Email = "askari.codes@gmail.com";
 
 export const myPersonalInformation = [
   { label: "Email", value: "askari.codes@gmail.com" },
@@ -95,14 +98,14 @@ export const whatIDoContent = {
 export const resumeContent = {
   pageBackgroundTitle: "SUMMARY",
   pageTitle: "Resume",
-  languages:'English-Farsi',
-  skillsData:[
-    { skill: 'Web Design', percentage: 65 },
-    { skill: 'React JS', percentage: 85 },
-    { skill: 'JavaScript', percentage: 70 },
-    { skill: 'Redux', percentage: 70 },
-    { skill: 'Scrum', percentage: 90 },
-    { skill: 'Tailwind', percentage: 90 },
+  languages: "English-Farsi",
+  skillsData: [
+    { skill: "Web Design", percentage: 65 },
+    { skill: "React JS", percentage: 85 },
+    { skill: "JavaScript", percentage: 70 },
+    { skill: "Redux", percentage: 70 },
+    { skill: "Scrum", percentage: 90 },
+    { skill: "Tailwind", percentage: 90 },
   ],
   sections: [
     {
@@ -110,19 +113,19 @@ export const resumeContent = {
       items: [
         {
           title: "Front-end Developer",
-          company: 'Chargoon',
+          company: "Chargoon",
           date: "2021-2023",
           content: `Collaborated with teams to design, develop, and maintain responsive web applications using React JS. Participated in agile processes, including sprint planning and retrospectives. Conducted code reviews and provided feedback to ensure code quality. Integrated RESTful APIs for seamless front-end and back-end communication. Managed state efficiently with Redux and Context API for optimal performance.`,
         },
         {
           title: "Achievements",
-          company: 'Chargoon',
+          company: "Chargoon",
           date: "2021-2023",
           content: `Increased team productivity by 20% in completed story points. Reduced bugs by 15%, ensuring better software quality and smoother user experiences. Stayed current with industry trends and best practices. Contributed to overall project success by continuously improving my skills and knowledge, delivering consistently high-quality outcomes for clients and stakeholders.`,
         },
         {
           title: "Technologies Used",
-          company: 'Chargoon',
+          company: "Chargoon",
           date: "2021-2023",
           content: `Utilized React JS, Redux, and Context API to develop scalable web applications. Integrated RESTful APIs to ensure seamless communication between front-end and back-end systems. Worked within agile methodologies, contributing to project delivery. Focused on performance optimization and state management, ensuring smooth and efficient functionality throughout the development process.`,
         },
@@ -133,53 +136,90 @@ export const resumeContent = {
       items: [
         {
           title: "Front-end Developer",
-          company: 'Mapsa Bootcamp',
+          company: "Mapsa Bootcamp",
           date: "2020-2021",
           content: `Assisted in the development of React components and user interfaces. Worked on state management and UI/UX design tasks. Gained hands-on experience in developing web applications. Participated in various stages of front-end development, ensuring responsiveness and functionality. Contributed to collaborative projects that implemented modern front-end development best practices.`,
         },
         {
           title: "Achievements",
-          company: 'Mapsa Bootcamp',
+          company: "Mapsa Bootcamp",
           date: "2020-2021",
           content: `Mastered modern JavaScript (ES6+), applying features like arrow functions, destructuring, and async/await. Developed strong debugging skills, resolving issues in React applications. Gained insights into React best practices and methodologies. Applied these skills to build efficient, user-friendly web applications. Improved development workflows and implemented practical solutions during training.`,
         },
         {
           title: "Technologies Used",
-          company: 'Mapsa Bootcamp',
+          company: "Mapsa Bootcamp",
           date: "2020-2021",
           content: `Worked extensively with React JS, JavaScript (ES6+), HTML, and CSS. Applied Redux for state management and focused on UI/UX design integration. Leveraged modern front-end technologies to create dynamic, responsive web applications that improved the overall user experience. Ensured effective state management and functional design in every project.`,
         },
       ],
-    }
-    
+    },
   ],
 };
 
 export const testimonialContent = {
-  pageBackgroundTitle: 'Testimonial',
-  pageTitle: 'What My Colleagues Say',
+  pageBackgroundTitle: "Testimonial",
+  pageTitle: "What My Colleagues Say",
   colleagues: [
     {
       id: 1,
-      name: 'Arezou Zahedi',
-      jobRole: 'Backend Developer',
-      image: arezoo,  
-      testimonial:'I had the pleasure of working with Mohammad for almost a year at Chargoon. As a frontend developer, he consistently delivered high-quality work and tackled challenges with ease.Mohammad is also a great team player. He communicated well, collaborated smoothly with the team, and always made sure we were aligned on our goals. His positive attitude and willingness to help made a big difference in our projects.I highly recommended Mohammad for any future role. He would be a great asset to any team.'
+      name: "Arezou Zahedi",
+      jobRole: "Backend Developer",
+      image: arezoo,
+      testimonial:
+        "I had the pleasure of working with Mohammad for almost a year at Chargoon. As a frontend developer, he consistently delivered high-quality work and tackled challenges with ease.Mohammad is also a great team player. He communicated well, collaborated smoothly with the team, and always made sure we were aligned on our goals. His positive attitude and willingness to help made a big difference in our projects.I highly recommended Mohammad for any future role. He would be a great asset to any team.",
     },
     {
       id: 2,
-      name: 'Shahin Azedi',
-      jobRole: 'Product Owner',
-      image: shahin,  
-      testimonial: 'Hardworking and logical, Mohammad is one of my most capable colleagues. If an organization is seeking someone who is dedicated to their work and brings creativity to the table '
+      name: "Shahin Azedi",
+      jobRole: "Product Owner",
+      image: shahin,
+      testimonial:
+        "Hardworking and logical, Mohammad is one of my most capable colleagues. If an organization is seeking someone who is dedicated to their work and brings creativity to the table ",
     },
     {
       id: 3,
-      name: 'Masoud Aqaei',
-      jobRole: 'Senior Frontend Engineer',
-      image: arghun,  
-      testimonial: 'Mohammad demonstrated strong growth as a junior frontend developer. His eagerness to learn and ability to grasp complex concepts quickly made him a valuable member of our frontend team. I look forward to seeing his continued success in the field'
-    }
-  ]
-}
+      name: "Masoud Aqaei",
+      jobRole: "Senior Frontend Engineer",
+      image: arghun,
+      testimonial:
+        "Mohammad demonstrated strong growth as a junior frontend developer. His eagerness to learn and ability to grasp complex concepts quickly made him a valuable member of our frontend team. I look forward to seeing his continued success in the field",
+    },
+  ],
+};
 
+export const contactContect = {
+  pageBackgroundTitle: "CONTACT",
+  pageTitle: "Get In Touch",
+  buttonText: "Send Message",
+  iconLabel: "FOLLOW ME",
+  emailBoxTexts: {
+    labelNames:{
+      name:'Name',
+      email:'Email',
+      message:'Message'
+    },
+    placeHolderTexts: {
+      name: "Name",
+      email: "Email",
+      commentBox: "Tell us more about your needs.......",
+    },
+  },
+  addresses: [
+    {
+      icon: FaMapMarkerAlt,
+      title: "Address",
+      description: "90 Eelderdiephof , Utrecht, Netherlands",
+    },
+    {
+      icon: FaPhone,
+      title: "Phone",
+      description: "+31 616622826",
+    },
+    {
+      icon: FaEnvelope,
+      title: "Email",
+      description: My_Email,
+    },
+  ],
+};

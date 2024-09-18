@@ -23,6 +23,15 @@ module.exports = {
         'portfolio-cloud':"url(images/cloud.jpg)",
         'myImage':"url(images/linked_in.jpg)"
       },
+      colors: {
+        'dark-background': '#111827',
+        'dark-gray': '#374151',
+        'light-gray': '#D1D5DB',
+        'primary': '#2563EB',
+        'accent': '#3B82F6',
+        'highlight': '#60A5FA',
+        'white': '#F9FAFB',
+      },
       
     },
   },

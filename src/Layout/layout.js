@@ -7,3 +7,9 @@ export const layoutConfig = {
     mobile:'header',
     desktop:'sidebar'
   }
+
+  export const emailJsConfig = {
+    serviceId:'service_7nwxzqb',
+    templateId:'template_jjfhp4d',
+    userId:'-YHNQGVQ8ZhTRibnw'
+  }
