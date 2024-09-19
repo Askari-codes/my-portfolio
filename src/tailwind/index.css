@@ -6,27 +6,48 @@
 @import "style.css";
 
 :root {
-  --color-primary: #2b6cb0;
-  --color-primary-light: #5a9bd8;
-  --color-secondary: #1a365d;
-  --color-accent: #90b2e6;
-  --color-teal: #5a7d7c;
-  --color-green: #0fb2aa;
+  /* Primary Colors */
+  --color-primary: #2B6CB0;       /* Medium Slate Blue */
+  --color-secondary: #1A365D;     /* Deep Navy Blue */
+  --color-accent: #E8F0FE;        /* Light Slate Blue */
 
-  --color-text-primary: #2d3748;
-  --color-text-secondary: #ffffff;
+  /* Extended Palette */
+  --color-primary-light: #63A4D8; /* Lighter shade of primary */
+  --color-primary-dark: #1A4E7E;  /* Darker shade of primary */
 
-  --color-background: #f0f4f8;
-  --color-sidebar-bg: var(--color-primary);
+  /* Text Colors */
+  --color-text-primary: #1b1b1b;
+  --color-text-secondary: var(--color-gray-700);  /* Dark Gray */
 
-  --color-border: #cbd5e0;
-  --color-placeholder: #a0aec0;
+  /* Background Colors */
+  --color-background: #F0F4F8;    /* Light Blue */
+  --color-card-bg: #FFFFFF;       /* White for card backgrounds */
 
-  --color-white: #ffffff;
+  /* Border and Outline Colors */
+  --color-border: var(--color-blue-100);        /* Light Gray */
+  --color-placeholder: #A0AEC0;   /* Medium Gray */
 
-  --color-success: #805ad5;
-  --color-error: #e53e3e;
+  /* Additional Colors */
+  --color-white: #FFFFFF;
+  --color-blue-500:#1f7ba9;
+  --color-blue-200: #80b9d5; 
+  --color-blue-100: #B3C6FF;
+  --color-blue-50: #dce4ff;
+
+  --color-gray-700: #333333;          /* Dark Gray */
+  --color-gray-600: #666666;          /* Medium Gray */
+  --color-gray-500: #999999;          /* Light-Medium Gray */
+  --color-gray-400: #CCCCCC;          /* Light Gray */
+  --color-gray-300: #E5E5E5;          /* Very Light Gray */
+
+
+
+  /* Highlight Color */
+  --color-highlight: var(--color-accent); /* Using accent color for highlights */
+
+  --bg-color-sidebar:var(--color-blue-200)
 }
+
 
 *,
 *::before,
@@ -89,6 +110,38 @@ h1 {
   }
   .emailBox-input {
     @apply mt-1  w-full bg-[var(--color-white)] text-[var(--color-text-primary)] border-[1px] border-[var(--color-border)] text-[1rem]  rounded  py-2 px-3 focus:border-[var(--color-primary)]   focus:outline-none;
+  }
+  .testimonial-swiper {
+    /* Customize pagination bullets */
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: var(--color-primary);
+      opacity: 0.7;
+      border-radius: 50%;
+      margin: 0 5px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--color-highlight);
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    /* Center pagination bullets */
+    .custom-pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    /* Optional: Add focus and hover styles for accessibility */
+    .swiper-pagination-bullet:focus::after,
+    .swiper-pagination-bullet:hover::after {
+      box-shadow: 0 0 0 2px var(--color-highlight);
+    }
   }
 }
 

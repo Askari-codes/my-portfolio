@@ -107,7 +107,7 @@ const ContactForm = () => {
                 <div className="text-center lg:text-left">
                     <button
                         type="submit"
-                        className="w-full xs:w-auto  bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] rounded-md text-[var(--color-white)] border-none py-[10px] px-[20px] cursor-pointer font-medium transition-colors duration-200"
+                        className="w-full xs:w-auto  bg-[var(--color-blue-200)] hover:bg-[var(--color-secondary)] rounded-md text-[var(--color-white)] border-none py-[10px] px-[20px] cursor-pointer font-medium transition-colors duration-200"
                     >
                         Send Message
                     </button>

@@ -6,7 +6,7 @@ function WhatIDo() {
 
 
     return (
-        <div className=' min-h-screen text-[var(--text-color-secondary)] font-[poppins]  '>
+        <div className=' min-h-screen  font-[poppins]  '>
             <PageBackground pageBackgroundTitle={whatIDoContent.pageBackgroundTitle} pageTitle={whatIDoContent.pageTitle} />
             <div className=' grid md:grid-cols-2'>
             {whatIDoContent.services.map(item => <ServiceCard key={item.id} icon={item.icon} title={item.title} content={item.content} />)}

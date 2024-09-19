@@ -57,7 +57,7 @@ function Navigation({ type }) {
       {menuItemsData.map((item, index) => (
         <button
           key={index}
-          className={`w-full text-lg text-white hover:text-gray-200 transition-colors duration-300 ${
+          className={`w-full text-lg text-[--color-text-secondary] hover:text-[--color-text-primary] transition-colors duration-300 ${
             activeSection === item.path.replace('#', '')
               ? 'font-bold'
               : 'font-normal'

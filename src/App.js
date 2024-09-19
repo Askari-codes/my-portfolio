@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <div onClick={handleClick} className="relative w-full bg-[#333333]">
+    <div onClick={handleClick} className="relative w-full bg-[--color-background] ">
       <div className="lg:grid lg:grid-cols-[250px_1fr] lg:h-screen w-full h-full">
         <NavigationWrapper sectionRefs={sectionRefs} /> 
         <main

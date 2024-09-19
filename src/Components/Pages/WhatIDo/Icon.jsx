@@ -13,7 +13,7 @@ function Icon({icon}) {
       };
       const IconComponent = iconMap[icon]
     return ( 
-        <div className='react-icon w-[36px]      text-[var(--color-highlight)] text-4xl '>
+        <div className='react-icon w-[36px]      text-[--color-blue-200] text-4xl '>
         <IconComponent />
     </div>
      );

@@ -158,7 +158,7 @@ export const resumeContent = {
 };
 
 export const testimonialContent = {
-  pageBackgroundTitle: "Testimonial",
+  pageBackgroundTitle: "TESTIMONIAL",
   pageTitle: "What My Colleagues Say",
   colleagues: [
     {
@@ -167,7 +167,7 @@ export const testimonialContent = {
       jobRole: "Backend Developer",
       image: arezoo,
       testimonial:
-        "I had the pleasure of working with Mohammad for almost a year at Chargoon. As a frontend developer, he consistently delivered high-quality work and tackled challenges with ease.Mohammad is also a great team player. He communicated well, collaborated smoothly with the team, and always made sure we were aligned on our goals. His positive attitude and willingness to help made a big difference in our projects.I highly recommended Mohammad for any future role. He would be a great asset to any team.",
+        "Worked with Mohammad for a year at Chargoon as a frontend developer. Delivered high-quality work, tackled challenges with ease, and was an excellent team player. Highly recommend him—he’s a valuable asset.",
     },
     {
       id: 2,
@@ -180,10 +180,10 @@ export const testimonialContent = {
     {
       id: 3,
       name: "Masoud Aqaei",
-      jobRole: "Senior Frontend Engineer",
+      jobRole: "Senior Frontend ",
       image: arghun,
       testimonial:
-        "Mohammad demonstrated strong growth as a junior frontend developer. His eagerness to learn and ability to grasp complex concepts quickly made him a valuable member of our frontend team. I look forward to seeing his continued success in the field",
+        "Mohammad showed significant growth as a junior frontend developer. His eagerness to learn and quick grasp of complex concepts made him invaluable to our team. I look forward to his continued success",
     },
   ],
 };
