@@ -12,8 +12,8 @@ function AboutMe() {
 
     return (
         <div className="relative z-0 w-full p-4 text-justify flex flex-col   overflow-hidden min-h-screen">
-            <div className="relative flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 flex-grow min-h-full">
-                <PageBackground pageBackgroundTitle={aboutMeContent.pageBackgroundTitle} pageTitle={aboutMeContent.pageTitle} />
+            <div className="relative flex flex-col  lg:gap-4 flex-grow min-h-full">
+                <PageBackground  pageBackgroundTitle={aboutMeContent.pageBackgroundTitle}  pageTitle={aboutMeContent.pageTitle} />
                 <div className="text-[3vw] min-h-[50vh] text-justify col-span-2 lg:text-[1.5rem] lg:flex lg:flex-col lg:justify-center lg:flex-grow lg:self-baseline">
                     <h2 className="text-[4vw] font-semibold mb-4 text-[--text-color-secondary] text-center lg:text-[2rem]">
                         I'm <span className="text-[--color-blue-200]">{aboutMeContent.myName}</span>, {aboutMeContent.myJob}

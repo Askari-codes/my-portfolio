@@ -1,4 +1,4 @@
-// Sidebar.jsx
+
 import React from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons';
 import myPicture6 from '../../../tailwind/images/myPicture6.png';
@@ -7,7 +7,7 @@ import { Profile_Name } from '../../../Data/Data';
 
 const Sidebar = ({ type }) => {
   return (
-    <aside className="fixed top-0 left-0 flex flex-col w-[250px] h-full bg-[--bg-color-sidebar] z-10 overflow-auto">
+    <aside className=" fixed top-0 left-0 flex flex-col w-[250px] h-full bg-[--bg-color-sidebar] z-10 overflow-auto">
       {/* Profile Section */}
       <div className="my-8 flex flex-col items-center">
         <img

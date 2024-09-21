@@ -3,11 +3,12 @@ import AppContext from './AppContext';
 
 function AppProvider({ children }) {
     const [isOpen, setIsOpen] = useState(false);
-    const [currentPath, setCurrentPath] = useState('/');
+    const [activeSection,setActiveSection] = useState(null)
+    const [isHomeClicked,setIsHomeClicked] = useState(false)
+    
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
     const closeMenu = () => setIsOpen(false);
-    const updatePath = (path) => setCurrentPath(path);
     const [isScrolled, setIsScrolled] = useState(false);
 
     const sectionRefs = {
@@ -21,7 +22,7 @@ function AppProvider({ children }) {
     
 
     return (
-        <AppContext.Provider value={{ isOpen,setIsOpen, toggleMenu, closeMenu, updatePath,isScrolled,setIsScrolled,sectionRefs }}>
+        <AppContext.Provider value={{ isOpen,setIsOpen, toggleMenu, closeMenu,isScrolled,setIsScrolled,sectionRefs,activeSection,setActiveSection,isHomeClicked,setIsHomeClicked }}>
             {children}  
         </AppContext.Provider>
     );

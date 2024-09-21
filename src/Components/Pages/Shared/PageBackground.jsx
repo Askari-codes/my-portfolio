@@ -2,9 +2,9 @@ import React from 'react';
 
 const PageBackground = ({ pageBackgroundTitle, pageTitle }) => {
     return (
-        <div className="relative flex justify-center items-center min-h-[22vh] lg:min-h-[30vh] mt-10 lg:mt-0  opacity-70">
+        <div className="relative flex justify-center   items-center min-h-[22vh] lg:min-h-[30vh]   opacity-70">
             {/* Background Title */}
-            <div className="absolute inset-0 flex justify-center items-center text-[13vw] lg:text-[11vw] font-bold text-[--color-blue-200] opacity-15 lg:opacity-20">
+            <div className="absolute inset-0   flex justify-center  items-center  text-[14vw] md:text-[12vw] lg:text-[11vw] font-bold text-[--color-blue-200] mt-10 opacity-15 lg:opacity-20">
                 {pageBackgroundTitle}
             </div>
             

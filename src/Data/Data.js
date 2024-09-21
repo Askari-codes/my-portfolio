@@ -29,7 +29,7 @@ export const myPersonalInformation = [
 ];
 
 export const aboutMeContent = {
-  pageBackgroundTitle: "About Me",
+  pageBackgroundTitle: "ABOOUT ME",
   pageTitle: "Know Me More ",
   myName: Profile_Name,
   myJob: "a Frontend Developer",

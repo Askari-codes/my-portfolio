@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import VideoBackground from '../VideoBackground';
 
@@ -54,10 +54,10 @@ const Home = () => {
 
     return (
         <div 
-        className="relative flex flex-col items-center justify-center h-screen w-full">
+        className="relative flex flex-col items-center justify-center min-h-screen w-full">
             <VideoBackground />
             <motion.div
-                className="text-center xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-accent)]"
+                className="text-center xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-blue-500)]"
                 variants={container}
                 initial='visible'
                 animate='visible'
@@ -69,7 +69,7 @@ const Home = () => {
                 ))}
             </motion.div>
             <motion.div
-                className="p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-[var(--text-color-primary)]"
+                className="p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-[white]"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -81,7 +81,7 @@ const Home = () => {
                 ))}
             </motion.div>
             <motion.div
-                className="p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-[var(--text-color-primary)]"
+                className="p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-[white]"
                 variants={container}
                 initial="hidden"
                 animate="visible"
