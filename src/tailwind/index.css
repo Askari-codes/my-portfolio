@@ -10,6 +10,7 @@
   --color-primary: #2B6CB0;       /* Medium Slate Blue */
   --color-secondary: #1A365D;     /* Deep Navy Blue */
   --color-accent: #E8F0FE;        /* Light Slate Blue */
+  --color-accent-2: #f6f9ff;        /* Light Slate Blue */
 
   /* Extended Palette */
   --color-primary-light: #63A4D8; /* Lighter shade of primary */
@@ -64,15 +65,18 @@ h1 {
   font-weight: 600;
 }
 @layer utilities {
+}
+
+@layer components {
+}
+
+@layer components {
   .border-information {
-    border-bottom: 1px solid rgba(160, 155, 147, 0.5);
+    border-bottom: 3px solid rgba(160, 155, 147, 0.5);
   }
-}
-
-@layer components {
-}
-
-@layer components {
+  .border-header {
+    border-bottom: 4px solid white
+  }
   .navigation-sidebar {
     @apply flex flex-col w-full h-[60%] shrink justify-center;
   }

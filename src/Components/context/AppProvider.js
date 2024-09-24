@@ -1,31 +1,47 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import AppContext from './AppContext';
+import {sections} from '../../Data/Data'
 
 function AppProvider({ children }) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeSection,setActiveSection] = useState(null)
-    const [isHomeClicked,setIsHomeClicked] = useState(false)
-    
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(sections[0].id);
+  const [isHomeClicked, setIsHomeClicked] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-    const toggleMenu = () => setIsOpen((prev) => !prev);
-    const closeMenu = () => setIsOpen(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+  const scrollContainerRef = useRef(null);
 
-    const sectionRefs = {
-        home: useRef(null),
-        aboutMe: useRef(null),
-        whatIDo: useRef(null),
-        resume: useRef(null),
-        testimonial: useRef(null),
-        contact: useRef(null),
-      };
-    
+  const sectionRefs = {
+    home: useRef(null),
+    aboutMe: useRef(null),
+    whatIDo: useRef(null),
+    resume: useRef(null),
+    testimonial: useRef(null),
+    contact: useRef(null),
+  };
 
-    return (
-        <AppContext.Provider value={{ isOpen,setIsOpen, toggleMenu, closeMenu,isScrolled,setIsScrolled,sectionRefs,activeSection,setActiveSection,isHomeClicked,setIsHomeClicked }}>
-            {children}  
-        </AppContext.Provider>
-    );
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+    <AppContext.Provider
+      value={{
+        isOpen,
+        setIsOpen,
+        toggleMenu,
+        closeMenu,
+        sectionRefs,
+        activeSection,
+        setActiveSection,
+        isHomeClicked,
+        setIsHomeClicked,
+        isScrolling,
+        setIsScrolling,
+        scrollContainerRef, 
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export default AppProvider;

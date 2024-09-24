@@ -1,93 +1,75 @@
-import React, { useEffect, useRef, useState } from "react";
-import Home from "./Components/Pages/Home";
-import AboutMe from "./Components/Pages/About-Me/AboutMe";
-import WhatIDo from "./Components/Pages/WhatIDo/WhatIDo";
-import Resume from "./Components/Pages/Resume/Resume";
-import Testimonial from "./Components/Pages/Testimonial/Testimonial";
-import Contact from "./Components/Pages/Contact/Contact";
+import React, { useEffect, useRef, useCallback } from "react";
 import useAppContext from "./hooks/useAppContext";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
+import { sections,sectionNames } from "./Data/Data";
+import { SCROLL_OFFSET } from "./Layout/layout";
+import clsx from "clsx";
 
 function App() {
-  const { isOpen, closeMenu, setIsScrolled,sectionRefs,activeSection,setActiveSection,isHomeClicked,setIsHomeClicked } = useAppContext();
+  const {
+    isOpen,
+    closeMenu,
+    sectionRefs,
+    activeSection,
+    setActiveSection,
+    scrollContainerRef,
+  } = useAppContext();
 
-  const scrollContainerRef = useRef(null);
 
-  useEffect(() => {
-    console.log('active section',activeSection);
-    
-  }, [activeSection]);
+  const sectionPositions = useRef({});
 
-  useEffect(() => {
-    if (activeSection === 'home' && isHomeClicked) {
-      setIsHomeClicked(false);
-    }
-  }, [activeSection, isHomeClicked, setIsHomeClicked]);
 
-  useEffect(() => {
-    const observerOptions = {
-      root: scrollContainerRef.current, // Use the scroll container as the root
-      rootMargin: !isHomeClicked?'500px':'0px',
-      threshold: 1, 
-    };
-   
-
-    const observerCallback = (entries) => {
-      let maxRatio = 0;
-      let visibleSection = activeSection; // Default to current activeSection
-    
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-          maxRatio = entry.intersectionRatio;
-          visibleSection = entry.target.id;
-        }
-      });
-    
-      if (visibleSection !== activeSection) {
-        setActiveSection(visibleSection);
-        // Update the URL without adding a new entry to the history
-        window.history.replaceState(null, '', `#${visibleSection}`);
-      }
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe each section
-    Object.values(sectionRefs).forEach(ref => {
-      if (ref.current) {
-        // console.log('ref if',ref,'ref current is',ref.current);
-        
-        observer.observe(ref.current);
-        // console.log(`Observing section: ${ref.current.id}`); // Debug log
+  const updateSectionPositions = useCallback(() => {
+    const positions = {};
+    sections.forEach(({ id }) => {
+      if (sectionRefs[id]?.current) {
+        positions[id] = sectionRefs[id].current.offsetTop;
       }
     });
+    sectionPositions.current = positions;
+  }, [sections, sectionRefs]);
 
-    return () => {
-      // Unobserve all sections on cleanup
-      Object.values(sectionRefs).forEach(ref => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-          // console.log(`Unobserving section: ${ref.current.id}`); // Debug log
-        }
-      });
-    };
-  }, [sectionRefs])
+  
+  const handleScroll = useCallback(() => {
+    if (!scrollContainerRef.current || !sectionPositions.current) return;
 
-  useEffect(() => {
-    // console.log('avtive section',activeSection);
-    
-  }, [activeSection]);
+    const scrollPosition = scrollContainerRef.current.scrollTop;
+    let currentSection = sectionNames.HOME ; 
 
-  const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const scrollTop = scrollContainerRef.current.scrollTop;
-      if (scrollTop > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const { id } = sections[i];
+      const position = sectionPositions.current[id] || 0;
+      if (scrollPosition >= position - SCROLL_OFFSET) {
+        currentSection = id;
+        break;
       }
     }
-  };
+
+    if (currentSection !== activeSection) {
+      setActiveSection(currentSection);
+      window.history.replaceState(null, "", `#${currentSection}`);
+    }
+  }, [
+    activeSection,
+    scrollContainerRef,
+    sectionPositions,
+    setActiveSection,
+    sections,
+  ]);
+
+
+  const handleClick = useCallback(() => {
+    if (isOpen) {
+      closeMenu();
+    }
+  }, [isOpen, closeMenu]);
+
+  
+  useEffect(() => {
+    updateSectionPositions();
+
+  }, [updateSectionPositions]);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -97,44 +79,39 @@ function App() {
         scrollContainer.removeEventListener("scroll", handleScroll);
       };
     }
-  }, []);
+  }, [handleScroll, scrollContainerRef]);
 
-  const handleClick = () => {
-    if (isOpen) {
-      closeMenu();
-    }
-  };
-  useEffect(() => {
-    // console.log('section ref',sectionRefs);
-    
-  }, [sectionRefs]);
-  // lg:grid lg:grid-cols-[250px_1fr] lg:h-screen w-full h-full
+ 
   return (
-    <div onClick={handleClick} className="relative w-full bg-[--color-background] h-screen ">
-            <div className={`${activeSection==='home'?'':'lg:grid lg:grid-cols-[250px_1fr] lg:h-full w-full h-full'}`}>
-      { activeSection==='home'?null:<NavigationWrapper sectionRefs={sectionRefs} /> }
+    <div
+      onClick={handleClick}
+      className="relative w-full h-screen bg-[--color-background]"
+    >
+      <div className="w-frll h-full lg:grid lg:h-full lg:grid-cols-[250px_1fr]">
+        <NavigationWrapper
+          sectionRefs={sectionRefs}
+          isVisible={activeSection !== sectionNames.HOME}
+        />
+
         <main
           ref={scrollContainerRef}
-          className="w-full h-screen overflow-x-hidden overflow-y-auto"
+          className={clsx(
+            "w-full h-screen overflow-x-hidden overflow-y-auto",
+            {
+              "col-span-2": activeSection === sectionNames.HOME,
+            }
+          )}
         >
-          <section ref={sectionRefs.home} id="home" className="min-h-screen w-full">
-            <Home />
-          </section>
-          <section ref={sectionRefs.aboutMe} id="aboutMe" className="min-h-screen w-full">
-            <AboutMe />
-          </section>
-          <section ref={sectionRefs.whatIDo} id="whatIDo" className="min-h-screen w-full">
-            <WhatIDo />
-          </section>
-          <section ref={sectionRefs.resume} id="resume" className="min-h-screen w-full">
-            <Resume />
-          </section>
-          <section ref={sectionRefs.testimonial} id="testimonial" className="min-h-screen w-full">
-            <Testimonial />
-          </section>
-          <section ref={sectionRefs.contact} id="contact" className="min-h-screen w-full">
-            <Contact />
-          </section>
+          {sections.map(({ id, component: Component }) => (
+            <section
+              key={id}
+              ref={sectionRefs[id]}
+              id={id}
+              className="w-full min-h-screen"
+            >
+              <Component />
+            </section>
+          ))}
         </main>
       </div>
     </div>

@@ -2,6 +2,26 @@ import shahin from "../tailwind/images/shahin.jpeg";
 import arezoo from "../tailwind/images/arezoo.jpeg";
 import arghun from "../tailwind/images/arghun.jpeg";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import Home from "../Components/Pages/Home/Home";
+import AboutMe from '../Components/Pages/About-Me/AboutMe';
+import WhatIDo from '../Components/Pages/WhatIDo/WhatIDo'
+import Resume from '../Components/Pages/Resume/Resume';
+import Testimonial from '../Components/Pages/Testimonial/Testimonial'
+import Contact from '../Components/Pages/Contact/Contact'
+
+
+
+// Define the sections array
+export const sections = [
+  { id: "home", component: Home },
+  { id: "aboutMe", component: AboutMe },
+  { id: "whatIDo", component: WhatIDo },
+  { id: "resume", component: Resume },
+  { id: "testimonial", component: Testimonial },
+  { id: "contact", component: Contact },
+];
+
+
 export const IconsData = [
   { name: "linkedin", href: "https://www.linkedin.com/in/mohammad-askarii/" },
   { name: "github", href: "https://github.com/askari-fahlyani" },
@@ -20,13 +40,98 @@ export const Profile_Name = "Mohammad Askari";
 
 export const My_Email = "askari.codes@gmail.com";
 
+export const sectionNames = {
+  HOME: "home",
+  ABOUT_ME: "aboutMe",
+  WHAT_I_DO: "whatIDo",
+  RESUME: "resume",
+  TESTIMONIAL: "testimonial",
+  CONTACT: "contact",
+}
+
+
+
 export const myPersonalInformation = [
-  { label: "Email", value: "askari.codes@gmail.com" },
+  { label: "Email", value: My_Email },
   { label: "Age", value: "33" },
   { label: "From", value: "Utrecht" },
   { label: "Experience", value: "3+ Years" },
   { label: "Name", value: "Mohammad Askari" },
 ];
+
+export const homeContent = {
+  textItems: [
+    {
+      text: "I'm Mohammad Askari",
+      className:
+        "text-center h-full  xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-blue-500)]",
+      initial: "visible",
+      variant: {
+        initial: { opacity: 1 },
+        exit: { opacity: 1 },
+        hidden: { opacity: 1 },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      },
+    },
+    {
+      text: "I'm a frontend developer",
+      className:
+        "p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-white",
+      initial: "hidden",
+      variant: {
+        hidden: { opacity: 0.1 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 2,
+          },
+        },
+      },
+    },
+    {
+      text: "Crafting beautiful and functional web experiences",
+      className:
+        "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-white",
+      initial: "hidden",
+      variant: {
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            repeat: Infinity,
+            repeatType: "mirror",
+            duration: 1,
+          },
+        },
+      },
+    },
+  ],
+  buttonSection: {
+    text: "Get To Know Me",
+    className:
+      "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-white font-semibold",
+    initial: "hidden",
+    variant: {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 1,
+        },
+      },
+    },
+  },
+};
 
 export const aboutMeContent = {
   pageBackgroundTitle: "ABOOUT ME",
@@ -194,10 +299,10 @@ export const contactContect = {
   buttonText: "Send Message",
   iconLabel: "FOLLOW ME",
   emailBoxTexts: {
-    labelNames:{
-      name:'Name',
-      email:'Email',
-      message:'Message'
+    labelNames: {
+      name: "Name",
+      email: "Email",
+      message: "Message",
     },
     placeHolderTexts: {
       name: "Name",

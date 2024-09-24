@@ -8,7 +8,7 @@ function SocialMediaIcons({ className }) {
     <div className={className}>
       {IconsData.map((item) => (
         <Icon
-          className="text-2xl hover:text-gray-200 transition-colors duration-300"
+          className="text-2xl text-[var(--color-blue-500)] hover:text-gray-200 transition-colors duration-300"
           key={item.name}
           name={item.name}
           href={item.href}

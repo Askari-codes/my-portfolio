@@ -1,14 +1,18 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons';
 import myPicture6 from '../../../tailwind/images/myPicture6.png';
 import Navigation from '../Navigation';
 import { Profile_Name } from '../../../Data/Data';
 
-const Sidebar = ({ type }) => {
+const Sidebar = ({ type,isVisible }) => {
+  useEffect(()=>{
+    console.log('is visible',isVisible);
+    
+  },[isVisible])
   return (
-    <aside className=" fixed top-0 left-0 flex flex-col w-[250px] h-full bg-[--bg-color-sidebar] z-10 overflow-auto">
-      {/* Profile Section */}
+    <aside className={`${isVisible?'':'hidden'} fixed top-0 left-0 flex flex-col w-[250px] h-full bg-[--bg-color-sidebar] z-10 overflow-auto`}>
+    
       <div className="my-8 flex flex-col items-center">
         <img
           src={myPicture6}
@@ -19,9 +23,9 @@ const Sidebar = ({ type }) => {
           {Profile_Name}
         </div>
       </div>
-      {/* Navigation Links */}
+
       <Navigation type={type} />
-      {/* Social Media Icons */}
+   
       <div className="mt-auto mb-8">
         <SocialMediaIcons
           itemSize="text-2xl"

@@ -6,13 +6,13 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import useAppContext from '../../hooks/useAppContext';
 import Header from './Header/Header';
 
-function NavigationWrapper() {
+function NavigationWrapper({isVisible}) {
     const { closeMenu } = useAppContext()
     const isDesktop = useMediaQuery("(min-width: 1024px)");
     useEffect(() => {
-        console.log(isDesktop);
+        console.log(isVisible);
         
-    }, [isDesktop]);
+    }, [isVisible]);
 
     useEffect(() => {
         if (isDesktop) {
@@ -22,7 +22,7 @@ function NavigationWrapper() {
 
     return (
         <div>
-            {isDesktop ? <Sidebar  type={navigationConfig.desktop} /> : <Header  type={navigationConfig.mobile} />}
+            {isDesktop ? <Sidebar isVisible={isVisible}  type={navigationConfig.desktop} /> : <Header  type={navigationConfig.mobile} isVisible={isVisible} />}
         </div>
     )
 }
