@@ -5,17 +5,18 @@ import ResumeSection from './ResumeSection';
 import Skills from './Skills';
 
 function Resume() {
-
     return (
-        <div className='bg-[--color-background] min-h-screen w-full flex flex-col  font-poppins'>
-           <div>
-           <PageBackground pageBackgroundTitle={resumeContent.pageBackgroundTitle} pageTitle={resumeContent.pageTitle} />
-           </div>
-            <div className="experiences grid md:grid-cols-[1fr_1fr] p-2 min-h-screen   ">
-                {resumeContent.sections.map((section,index) => <ResumeSection key={index} resumeTitle={section.title} items={section.items} />)}
+        <div className="flex flex-col w-full min-h-screen bg-[--color-background] font-poppins">
+            <div>
+                <PageBackground pageBackgroundTitle={resumeContent.pageBackgroundTitle} pageTitle={resumeContent.pageTitle} />
             </div>
-            <div className=''>
-                <Skills/>
+            <div className="grid p-2 min-h-screen md:grid-cols-[1fr_1fr] experiences">
+                {resumeContent.sections.map((section, index) => (
+                    <ResumeSection key={index} resumeTitle={section.title} items={section.items} />
+                ))}
+            </div>
+            <div>
+                <Skills />
             </div>
         </div>
     );

@@ -1,9 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import VideoBackground from '../../VideoBackground';
 import Lottie from 'lottie-react';
-import narrowIcon from '../../../Assets/animations/narrowIcon.json'
-import useAppContext from '../../../hooks/useAppContext'
+import narrowIcon from '../../../Assets/animations/narrowIcon.json';
+import useAppContext from '../../../hooks/useAppContext';
 import { homeContent } from '../../../Data/Data';
 import AnimatedTextLine from './AnimatedTextLine';
 
@@ -23,29 +22,42 @@ const Home = () => {
             });
         }
     };
+
     return (
-        <div
-            className="relative grid  grid-rows-[10fr,2fr] items-center min-h-screen w-full"
-        >
+        <div className="relative grid items-center w-full min-h-screen grid-rows-[10fr,2fr]">
             <VideoBackground />
             <div>
-                {homeContent.textItems.map((item, index) =>
-                    <AnimatedTextLine key={index} text={item.text} className={item.className} variant={item.variant} initial={item.initial} />
-                )}
-
+                {homeContent.textItems.map((item, index) => (
+                    <AnimatedTextLine
+                        key={index}
+                        text={item.text}
+                        className={item.className}
+                        variant={item.variant}
+                        initial={item.initial}
+                    />
+                ))}
             </div>
 
-            <div className=" opacity-95 flex flex-col justify-center items-center">
-                <AnimatedTextLine text={homeContent.buttonSection.text} className={homeContent.buttonSection.className} variant={homeContent.buttonSection.variant} initial={homeContent.buttonSection.initial} />
+            <div className="flex flex-col items-center justify-center opacity-95">
+                <AnimatedTextLine
+                    text={homeContent.buttonSection.text}
+                    className={homeContent.buttonSection.className}
+                    variant={homeContent.buttonSection.variant}
+                    initial={homeContent.buttonSection.initial}
+                />
                 <button
                     onClick={handleClick}
-                    className="px-6 py-3 w-full opacity-95 text-white rounded-md flex flex-col justify-center items-center gap-2"
+                    className="flex flex-col items-center justify-center w-full gap-2 px-6 py-3 text-white rounded-md opacity-95"
                 >
-                    <Lottie className='text-white' animationData={narrowIcon} loop={true} style={{ width: 100, height: 100, }} />
+                    <Lottie
+                        className="text-white"
+                        animationData={narrowIcon}
+                        loop={true}
+                        style={{ width: 100, height: 100 }}
+                    />
                 </button>
             </div>
         </div>
-
     );
 }
 

@@ -11,7 +11,7 @@ import Contact from '../Components/Pages/Contact/Contact'
 
 
 
-// Define the sections array
+
 export const sections = [
   { id: "home", component: Home },
   { id: "aboutMe", component: AboutMe },
@@ -36,9 +36,14 @@ export const menuItemsData = [
   { label: "Contact", path: "#contact", isActive: false },
 ];
 
+export const CONTACT_LABLE= 'Contact'
+export const EMAIL_LABEL='Email'
+
 export const Profile_Name = "Mohammad Askari";
 
 export const My_Email = "askari.codes@gmail.com";
+
+export const RESUME_DOWNLOAD_URL = `${process.env.PUBLIC_URL}/resume.pdf`
 
 export const sectionNames = {
   HOME: "home",
@@ -134,8 +139,9 @@ export const homeContent = {
 };
 
 export const aboutMeContent = {
-  pageBackgroundTitle: "ABOOUT ME",
+  pageBackgroundTitle: "ABOUT ME",
   pageTitle: "Know Me More ",
+  buttonTitle:'Download CV',
   myName: Profile_Name,
   myJob: "a Frontend Developer",
   introduction: {
@@ -144,7 +150,7 @@ export const aboutMeContent = {
                         six months, where I gained foundational skills, and then spent over two years at a leading company,
                         consistently delivering high-quality projects that exceeded expectations.
                       `,
-    partTow: ` I am committed to providing exceptional service and ensuring that every project I undertake is completed to the
+    partTwo: ` I am committed to providing exceptional service and ensuring that every project I undertake is completed to the
                         highest standard. My experience as a frontend developer has equipped me with the skills to turn creative ideas
                         into functional and dynamic websites`,
   },
@@ -328,3 +334,8 @@ export const contactContect = {
     },
   ],
 };
+
+export const toastContent = {
+  success:'Email successfully sent!',
+  error:'Operation failed!'
+}

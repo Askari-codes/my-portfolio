@@ -1,13 +1,12 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { menuItemsData } from "../../Data/Data";
 import useAppContext from "../../hooks/useAppContext";
 import { navigationConfig } from "../../Layout/layout";
+import { CONTACT_LABLE } from "../../Data/Data";
+import clsx from 'clsx'
 
-function Navigation({type}) {
-  useEffect(() => {
-    console.log('type',type);
-    
-  }, [type]);
+function Navigation({ type }) {
+
   const { closeMenu, sectionRefs, activeSection } = useAppContext();
   const scrollContainerRef = document.querySelector("main");
 
@@ -24,38 +23,50 @@ function Navigation({type}) {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    function easeInOutQuad(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
+    function easeInOutQuad(timeElapsed, startValue, changeInValue, duration) {
+      timeElapsed /= duration / 2;
+      if (timeElapsed < 1) {
+        return (changeInValue / 2) * timeElapsed * timeElapsed + startValue;
+      }
+      timeElapsed--;
+      return (-changeInValue / 2) * (timeElapsed * (timeElapsed - 2) - 1) + startValue;
     }
 
     requestAnimationFrame(animation);
   };
 
   const handleLinkClick = (section) => {
-   
+
     closeMenu();
     const targetPosition = sectionRefs[section]?.current?.offsetTop || 0;
-    smoothScrollTo(targetPosition, 1000); // Adjust duration as needed
+    smoothScrollTo(targetPosition, 1000);
     window.history.pushState(null, "", `#${section}`);
   };
 
   return (
-    <nav className={`flex flex-col items-center ${type===navigationConfig.mobile?'  mt-0  ':'mt-8'}`}>
+    <nav className={clsx(
+      {
+        'mt-0': type === navigationConfig.mobile,
+        'mt-10': type !== navigationConfig.mobile
+      }
+    )}>
       {menuItemsData.map((item, index) => (
         <button
           key={index}
-          className={`w-full text-lg text-[--color-text-secondary] hover:text-[--color-text-primary] transition-colors duration-300 ${
-            activeSection === item.path.replace("#", "")
-              ? "font-bold bg-[var(--color-blue-200)] text-[var(--color-text-primary)] hover:bg-[var(--color-blue-500)] "
-              : "font-normal"
-          }
-          ${type===navigationConfig.mobile?'flex  px-4 py-2 bg-[var(--color-background)] text-[var(--color-blue-500)] border-[1px] font-semibold hover:text-[--color-blue-200] ':''}
-          `
-        
-        }
+          className={clsx(
+            'w-full text-lg text-[--color-text-secondary] xxs:text-[1rem] md:text-[1.1rem]  transition-colors duration-300',
+            {
+              'font-bold  text-[var(--color-text-primary)] hover:bg-[var(--color-blue-250)] transition-colors duration-500 delay-400 ': activeSection === item.path.replace("#", ""),
+              ' hover:text-[var(--color-blue-600)] font-medium hover:font-semibold ': activeSection !== item.path.replace("#", "")
+            },
+            {
+              'flex px-4 py-2 bg-[var(--color-background)] text-[var(--color-blue-500)] font-semibold hover:text-[--color-blue-200] ': type === navigationConfig.mobile
+            },
+            {'flex justify-center p-4 border-none':type===navigationConfig.desktop},
+            {
+              'border-[1px]': item.label !== CONTACT_LABLE
+            }
+          )}
           onClick={() => handleLinkClick(item.path.replace("#", ""))}
         >
           {item.label}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import PageBackground from '../Shared/PageBackground';
 import TestimonialCard from './TestimonialCard';
 import { testimonialContent } from '../../../Data/Data';
@@ -11,16 +11,8 @@ import { Pagination } from 'swiper/modules';
 function Testimonial() {
   const swiperRef = useRef(null);
 
-
-
-
-
-  // const getAlignmentClass = (index, ) => {
-  //   return index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start';
-  // };
-
   return (
-    <div className="bg-[var(--color-background)] min-h-screen text-[var(--color-text-primary)] font-poppins relative">
+    <div className="relative h-screen bg-[var(--color-background)] text-[var(--color-text-primary)] font-poppins">
       <PageBackground
         pageBackgroundTitle={testimonialContent.pageBackgroundTitle}
         pageTitle={testimonialContent.pageTitle}
@@ -36,18 +28,17 @@ function Testimonial() {
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 2 },
-            // 1280: { slidesPerView: 3 }
           }}
           className="testimonial-swiper"
-          loop={true} // Optional: Enable looping
-          speed={600} // Optional: Adjust transition speed
+          loop={true}
+          speed={600}
         >
-          {testimonialContent.colleagues.map((colleague, index) => (
+          {testimonialContent.colleagues.map((colleague) => (
             <SwiperSlide
               key={colleague.id}
-              className={`xxs:min-h-[45vh] xs:min-h-[42vh]  md:min-h-[50vh] flex justify-center items-end  `}
+              className="flex items-end justify-center xxs:min-h-[45vh] xs:min-h-[42vh] md:min-h-[50vh]"
             >
-              <div className=' md:min-h-[360px]'>
+              <div className="md:min-h-[360px]">
                 <TestimonialCard
                   name={colleague.name}
                   jobRole={colleague.jobRole}
@@ -58,7 +49,6 @@ function Testimonial() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Custom Pagination Wrapper */}
         <div className="custom-pagination mt-4 flex justify-center"></div>
       </div>
     </div>

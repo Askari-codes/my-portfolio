@@ -6,49 +6,34 @@
 @import "style.css";
 
 :root {
-  /* Primary Colors */
-  --color-primary: #2B6CB0;       /* Medium Slate Blue */
-  --color-secondary: #1A365D;     /* Deep Navy Blue */
-  --color-accent: #E8F0FE;        /* Light Slate Blue */
-  --color-accent-2: #f6f9ff;        /* Light Slate Blue */
-
-  /* Extended Palette */
-  --color-primary-light: #63A4D8; /* Lighter shade of primary */
-  --color-primary-dark: #1A4E7E;  /* Darker shade of primary */
-
-  /* Text Colors */
+  --color-primary: #2B6CB0;
+  --color-secondary: #1A365D;
+  --color-accent: #E8F0FE;
+  --color-primary-light: #63A4D8;
+  --color-primary-dark: #1A4E7E;
   --color-text-primary: #1b1b1b;
-  --color-text-secondary: var(--color-gray-700);  /* Dark Gray */
-
-  /* Background Colors */
-  --color-background: #F0F4F8;    /* Light Blue */
-  --color-card-bg: #FFFFFF;       /* White for card backgrounds */
-
-  /* Border and Outline Colors */
-  --color-border: var(--color-blue-100);        /* Light Gray */
-  --color-placeholder: #A0AEC0;   /* Medium Gray */
-
-  /* Additional Colors */
+  --color-text-secondary: var(--color-gray-700);
+  --color-background: #F0F4F8;
+  --color-background-light: #f2f4f8;
+  --color-background-sidebar: #deedfb;
+  --color-card-bg: #FFFFFF;
+  --color-border: var(--color-blue-100);
+  --color-placeholder: #A0AEC0;
   --color-white: #FFFFFF;
-  --color-blue-500:#1f7ba9;
-  --color-blue-200: #80b9d5; 
+  --color-blue-500: #1f7ba9;
+  --color-blue-600: #0671a7;
+  --color-blue-200: #80b9d5;
+  --color-blue-250: #6fb3d5;
   --color-blue-100: #B3C6FF;
   --color-blue-50: #dce4ff;
-
-  --color-gray-700: #333333;          /* Dark Gray */
-  --color-gray-600: #666666;          /* Medium Gray */
-  --color-gray-500: #999999;          /* Light-Medium Gray */
-  --color-gray-400: #CCCCCC;          /* Light Gray */
-  --color-gray-300: #E5E5E5;          /* Very Light Gray */
-
-
-
-  /* Highlight Color */
-  --color-highlight: var(--color-accent); /* Using accent color for highlights */
-
-  --bg-color-sidebar:var(--color-blue-200)
+  --color-gray-700: #333333;
+  --color-gray-600: #666666;
+  --color-gray-500: #999999;
+  --color-gray-400: #CCCCCC;
+  --color-gray-300: #E5E5E5;
+  --color-highlight: var(--color-accent);
+  --bg-color-sidebar: var(--color-blue-200);
 }
-
 
 *,
 *::before,
@@ -75,7 +60,7 @@ h1 {
     border-bottom: 3px solid rgba(160, 155, 147, 0.5);
   }
   .border-header {
-    border-bottom: 4px solid white
+    border-bottom: 4px solid white;
   }
   .navigation-sidebar {
     @apply flex flex-col w-full h-[60%] shrink justify-center;
@@ -113,10 +98,9 @@ h1 {
     color: var(--text-color-highlight);
   }
   .emailBox-input {
-    @apply mt-1  w-full bg-[var(--color-white)] text-[var(--color-text-primary)] border-[1px] border-[var(--color-border)] text-[1rem]  rounded  py-2 px-3 focus:border-[var(--color-primary)]   focus:outline-none;
+    @apply mt-1 w-full bg-[var(--color-white)] text-[var(--color-text-primary)] border-[1px] border-[var(--color-border)] text-[1rem] rounded py-2 px-3 focus:border-[var(--color-primary)] focus:outline-none;
   }
   .testimonial-swiper {
-    /* Customize pagination bullets */
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
@@ -134,14 +118,12 @@ h1 {
       opacity: 1;
     }
 
-    /* Center pagination bullets */
     .custom-pagination {
       display: flex;
       justify-content: center;
       margin-top: 10px;
     }
 
-    /* Optional: Add focus and hover styles for accessibility */
     .swiper-pagination-bullet:focus::after,
     .swiper-pagination-bullet:hover::after {
       box-shadow: 0 0 0 2px var(--color-highlight);
@@ -161,5 +143,3 @@ h1 {
 .poppins-bold {
   @apply font-poppins font-bold;
 }
-
-

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { emailJsConfig } from '../../../Layout/layout';
 import ContactItems from './ContatctItems';
-import { contactContect } from '../../../Data/Data';
+import { contactContect, toastContent } from '../../../Data/Data';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -25,32 +25,28 @@ const ContactForm = () => {
                 emailJsConfig.userId
             )
             .then(
-                (result) => {
-                    console.log('result', result);
-
-                    toast.success('Email successfully sent!', {
-                        className: 'bg-[--color-primary] text-[--color-white] flex items-center rounded-md',
-                        progressClassName: 'bg-[--color-white] h-1',
+                () => {
+                    toast.success(toastContent.success, {
+                        className: 'flex items-center bg-[var(--color-primary)] text-[var(--color-white)] rounded-md shadow-md',
+                        progressClassName: 'bg-[var(--color-blue-500)] h-1',
                         icon: (
-                            <div className="flex items-center justify-center h-8 w-8 rounded-full bg-[]">
-                                <FaCheckCircle className="text-[--color-green]" />
+                            <div className="flex items-center justify-center h-8 w-8 rounded-full text-[var(--color-white)]">
+                                <FaCheckCircle className="text-[var(--color-white)]" />
                             </div>
                         ),
                     });
-
+            
                     setFormData({ name: '', email: '', message: '' });
                 },
                 () => {
-                    toast.error('Operation failed!', {
-                        className: 'flex items-center rounded-md',
-                        style: {
-                            backgroundColor: 'var(--color-error)',
-                            color: 'var(--color-white)'
-                        },
-                        progressStyle: {
-                            backgroundColor: 'var(--color-white)',
-                            height: '1px'
-                        },
+                    toast.error(toastContent.error, {
+                        className: 'flex items-center bg-[var(--color-secondary)] text-[var(--color-white)] rounded-md shadow-md',
+                        progressClassName: 'bg-[var(--color-accent)] h-1',
+                        icon: (
+                            <div className="flex items-center justify-center h-8 w-8 rounded-full bg-[var(--color-white)]">
+                                <FaExclamationCircle className="text-[var(--color-secondary)]" />
+                            </div>
+                        ),
                     });
                 }
             );
@@ -64,12 +60,14 @@ const ContactForm = () => {
             [name]: value,
         }));
     };
-    const defaultClassName = 'ToastPreogress';
+   
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:ml-24 xl:ml-20 2xl:ml-16">
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                    <label className=" text-sm font-medium p-1">{contactContect.emailBoxTexts.labelNames.name}</label>
+                    <label className="p-1 text-sm font-medium">
+                        {contactContect.emailBoxTexts.labelNames.name}
+                    </label>
                     <input
                         placeholder={contactContect.emailBoxTexts.placeHolderTexts.name}
                         type="text"
@@ -77,11 +75,13 @@ const ContactForm = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="emailBox-input "
+                        className="emailBox-input"
                     />
                 </div>
                 <div>
-                    <label className=" text-sm font-medium p-1">{contactContect.emailBoxTexts.labelNames.email}</label>
+                    <label className="p-1 text-sm font-medium">
+                        {contactContect.emailBoxTexts.labelNames.email}
+                    </label>
                     <input
                         placeholder={contactContect.emailBoxTexts.placeHolderTexts.email}
                         type="email"
@@ -93,7 +93,9 @@ const ContactForm = () => {
                     />
                 </div>
                 <div>
-                    <label className=" text-sm font-medium p-1">{contactContect.emailBoxTexts.labelNames.message}</label>
+                    <label className="p-1 text-sm font-medium">
+                        {contactContect.emailBoxTexts.labelNames.message}
+                    </label>
                     <textarea
                         placeholder={contactContect.emailBoxTexts.placeHolderTexts.commentBox}
                         name="message"
@@ -107,7 +109,7 @@ const ContactForm = () => {
                 <div className="text-center lg:text-left">
                     <button
                         type="submit"
-                        className="w-full xs:w-auto  bg-[var(--color-blue-200)] hover:bg-[var(--color-secondary)] rounded-md text-[var(--color-white)] border-none py-[10px] px-[20px] cursor-pointer font-medium transition-colors duration-200"
+                        className="w-full xs:w-auto py-[10px] px-[20px] bg-[var(--color-blue-500)] text-[var(--color-white)] hover:bg-[var(--color-secondary)] rounded-md border-none cursor-pointer font-medium transition-colors duration-200"
                     >
                         Send Message
                     </button>

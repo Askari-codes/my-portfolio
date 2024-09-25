@@ -107,7 +107,7 @@ function App() {
               key={id}
               ref={sectionRefs[id]}
               id={id}
-              className="w-full min-h-screen"
+              className="w-full "
             >
               <Component />
             </section>
