@@ -313,14 +313,14 @@ export const contactContect = {
     placeHolderTexts: {
       name: "Name",
       email: "Email",
-      commentBox: "Tell us more about your needs.......",
+      commentBox: "Have a question or an opportunity to discuss? Drop me a message..."
     },
   },
   addresses: [
     {
       icon: FaMapMarkerAlt,
       title: "Address",
-      description: "90 Eelderdiephof , Utrecht, Netherlands",
+      description: "Eelderdiephof 90 , Utrecht, Netherlands",
     },
     {
       icon: FaPhone,
