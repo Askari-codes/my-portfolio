@@ -9,16 +9,13 @@ import Header from './Header/Header';
 function NavigationWrapper({isVisible}) {
     const { closeMenu } = useAppContext()
     const isDesktop = useMediaQuery("(min-width: 1024px)");
-    useEffect(() => {
-        console.log(isVisible);
-        
-    }, [isVisible]);
+  
 
     useEffect(() => {
         if (isDesktop) {
             closeMenu()
         }
-    }, [])
+    },[isDesktop, closeMenu])
 
     return (
         <div>
