@@ -18,7 +18,7 @@ function NavigationWrapper({isVisible}) {
         if (isDesktop) {
             closeMenu()
         }
-    }, [isDesktop])
+    }, [])
 
     return (
         <div>

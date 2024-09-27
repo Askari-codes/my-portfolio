@@ -55,7 +55,7 @@ function App() {
     scrollContainerRef,
     sectionPositions,
     setActiveSection,
-    sections,
+    
   ]);
 
 
