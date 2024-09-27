@@ -38,7 +38,7 @@ function AboutMe() {
                     </div>
                     <button
                         onClick={handleDownload}
-                        className="flex items-center justify-center max-w-[250px] lg:w-[320px] mt-8 py-3 px-6 text-[12px] xs:text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] bg-[--color-blue-200] text-[--text-color-primary] rounded-lg shadow-lg hover:bg-[--color-blue-500] hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
+                        className="flex items-center justify-center max-w-[250px] lg:w-[320px] mt-8 py-3 px-6 text-[12px] xs:text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] bg-[red] text-[--text-color-primary] rounded-lg shadow-lg hover:bg-[--color-blue-500] hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
                     >
                         <HiOutlineDocumentDownload className="mr-2 text-xl lg:text-2xl" />
                     {aboutMeContent.buttonTitle}
