@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons.jsx';
 import HamburgerIcon from '../../Icons/HamburgerIcon.jsx';
 import useAppContext from '../../../hooks/useAppContext.js';

@@ -27,7 +27,7 @@ function App() {
       }
     });
     sectionPositions.current = positions;
-  }, [sections, sectionRefs]);
+  }, [ sectionRefs]);
 
   
   const handleScroll = useCallback(() => {

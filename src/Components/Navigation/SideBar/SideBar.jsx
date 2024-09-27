@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import SocialMediaIcons from '../../Icons/SocialMediaIcons';
 import myPicture6 from '../../../tailwind/images/myPicture6.png';
 import Navigation from '../Navigation';
