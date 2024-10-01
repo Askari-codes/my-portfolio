@@ -7,9 +7,9 @@ const SkillBar = ({ skill, percentage }) => {
         <span>{skill}</span>
         <span className="font-medium">{percentage}%</span>
       </div>
-      <div className="w-full h-2 bg-[--color-accent] rounded-full">
+      <div className="w-full h-2  rounded-full">
         <div
-          className="h-2 bg-[--color-blue-200] rounded-full"
+          className="h-2 bg-[--background-skills] rounded-full"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>

@@ -54,13 +54,13 @@ function Navigation({ type }) {
         <button
           key={index}
           className={clsx(
-            'w-full text-lg text-[--color-text-secondary] xxs:text-[1rem] md:text-[1.1rem]  transition-colors duration-300',
+            'w-full text-lg text-[--text-item-sidebar] xxs:text-[1rem] md:text-[1.1rem]  transition-colors duration-300',
             {
-              'font-bold  text-[var(--color-text-primary)] hover:bg-[var(--color-blue-250)] transition-colors duration-500 delay-400 ': activeSection === item.path.replace("#", ""),
-              ' hover:text-[var(--color-blue-600)] font-medium hover:font-semibold ': activeSection !== item.path.replace("#", "")
+              'font-bold  text-[--color-text-primary] hover:bg-[--background-item-sidebar-hover] transition-colors duration-500 delay-400 ': activeSection === item.path.replace("#", ""),
+              ' hover:text-[--text-item-sidebar-hover] font-medium hover:font-semibold ': activeSection !== item.path.replace("#", "")
             },
             {
-              'flex px-4 py-2 bg-[var(--color-background)] text-[var(--color-blue-500)] font-semibold hover:text-[--color-blue-200] ': type === navigationConfig.mobile
+              'flex px-4 py-2 bg-[--background-application] text-[--text-item-sidebar] font-semibold  ': type === navigationConfig.mobile
             },
             {'flex justify-center p-4 border-none':type===navigationConfig.desktop},
             {

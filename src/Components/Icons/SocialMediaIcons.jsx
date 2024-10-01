@@ -1,14 +1,23 @@
-// SocialMediaIcons.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IconsData } from '../../Data/Data';
+import { navigationConfig } from '../../Layout/layout';
 import Icon from './Icon';
+import clsx from 'clsx'
 
-function SocialMediaIcons({ className }) {
+function SocialMediaIcons({ className, type }) {
+  useEffect(() => {
+    console.log('type', type);
+
+  }, [type]);
   return (
     <div className={className}>
       {IconsData.map((item) => (
         <Icon
-          className="text-2xl text-[var(--color-blue-500)] hover:text-gray-200 transition-colors duration-300"
+          className={clsx(
+            'text-2xl  hover:text-[--text-social-media-hover] transition-colors duration-300"',
+            { 'text-[--text-icon-social-media-sidebar]': type === navigationConfig.desktop },
+            { 'text-[--text-icon-social-media-header]': type === navigationConfig.mobile }
+          )}
           key={item.name}
           name={item.name}
           href={item.href}

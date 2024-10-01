@@ -16,7 +16,7 @@ function Icon({ icon }) {
     const IconComponent = iconMap[icon];
     
     return (
-        <div className="w-[36px] text-4xl text-[--color-blue-200] react-icon">
+        <div className="w-[36px] text-4xl text-[--text-icon-service]  react-icon">
             <IconComponent />
         </div>
     );

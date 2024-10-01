@@ -85,7 +85,7 @@ function App() {
   return (
     <div
       onClick={handleClick}
-      className="relative w-full h-screen bg-[--color-background]"
+      className="relative w-full h-screen bg-[--background-application]"
     >
       <div className="w-frll h-full lg:grid lg:h-full lg:grid-cols-[250px_1fr]">
         <NavigationWrapper
@@ -103,11 +103,11 @@ function App() {
           )}
         >
           {sections.map(({ id, component: Component }) => (
-            <section
+            <section 
               key={id}
               ref={sectionRefs[id]}
               id={id}
-              className="w-full "
+              className="w-full bg-backgroundImage "
             >
               <Component />
             </section>

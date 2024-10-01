@@ -6,7 +6,7 @@ function ServiceCard({ title, content, icon }) {
         <div className="grid gap-3 p-8">
             <div className="flex items-center gap-4 h-[50px]">
                 <Icon icon={icon} />
-                <div className="text-[20px] font-semibold text-[--color-text-secondary] xxs:text-[12px] xs:text-[18px] md:text-[17px] xl:text-[20px] 2xl:text-[24px] service-title">
+                <div className="text-[20px] font-semibold text-[--text-title-service] xxs:text-[12px] xs:text-[18px] md:text-[17px] xl:text-[20px] 2xl:text-[24px] service-title">
                     {title}
                 </div>
             </div>

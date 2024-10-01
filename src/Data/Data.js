@@ -69,7 +69,7 @@ export const homeContent = {
     {
       text: "I'm Mohammad Askari",
       className:
-        "text-center h-full  xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[var(--color-blue-500)]",
+        "text-center h-full  xxs:text-[1.7rem] xs:text-[2rem] md:text-[2.5rem] xl:text-[3rem] font-bold text-[--text-home-title]",
       initial: "visible",
       variant: {
         initial: { opacity: 1 },

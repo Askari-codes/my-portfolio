@@ -6,7 +6,7 @@ import Skills from './Skills';
 
 function Resume() {
     return (
-        <div className="flex flex-col w-full min-h-screen bg-[--color-background] font-poppins">
+        <div className="flex flex-col w-full min-h-screen bg-[--background-application] font-poppins">
             <div>
                 <PageBackground pageBackgroundTitle={resumeContent.pageBackgroundTitle} pageTitle={resumeContent.pageTitle} />
             </div>

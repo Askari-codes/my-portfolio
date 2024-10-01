@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { emailJsConfig } from '../../../Layout/layout';
 import ContactItems from './ContatctItems';
@@ -14,6 +14,7 @@ const ContactForm = () => {
         message: ''
     });
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -27,11 +28,11 @@ const ContactForm = () => {
             .then(
                 () => {
                     toast.success(toastContent.success, {
-                        className: 'flex items-center bg-[var(--color-primary)] text-[var(--color-white)] rounded-md shadow-md',
-                        progressClassName: 'bg-[var(--color-blue-500)] h-1',
+                        className: 'flex items-center bg-[--background-toast-success] text-[--color-white] rounded-md shadow-md',
+                        progressClassName: 'bg-[--color-white] h-1',
                         icon: (
-                            <div className="flex items-center justify-center h-8 w-8 rounded-full text-[var(--color-white)]">
-                                <FaCheckCircle className="text-[var(--color-white)]" />
+                            <div className="flex items-center justify-center h-8 w-8 rounded-full text-[--color-white]">
+                                <FaCheckCircle className="text-[--color-white]" />
                             </div>
                         ),
                     });
@@ -40,14 +41,13 @@ const ContactForm = () => {
                 },
                 () => {
                     toast.error(toastContent.error, {
-                        className: 'flex items-center bg-[var(--color-secondary)] text-[var(--color-white)] rounded-md shadow-md',
-                        progressClassName: 'bg-[var(--color-accent)] h-1',
+                        progressClassName:'bg-[--background-progress-error-toast]',
                         icon: (
-                            <div className="flex items-center justify-center h-8 w-8 rounded-full bg-[var(--color-white)]">
-                                <FaExclamationCircle className="text-[var(--color-secondary)]" />
+                            <div className={'bg-[--color-white]'} >
+                                <FaExclamationCircle className='text-[--text-icon-toast-error]'  />
                             </div>
                         ),
-                    });
+                    })
                 }
             );
     };
@@ -109,7 +109,7 @@ const ContactForm = () => {
                 <div className="text-center lg:text-left">
                     <button
                         type="submit"
-                        className="w-full xs:w-auto py-[10px] px-[20px] bg-[var(--color-blue-500)] text-[var(--color-white)] hover:bg-[var(--color-secondary)] rounded-md border-none cursor-pointer font-medium transition-colors duration-200"
+                        className="w-full xs:w-auto py-[10px] px-[20px] bg-[--background-button] text-[--color-white] hover:bg-[--background-button-hover] rounded-md border-none cursor-pointer font-medium transition-colors duration-200"
                     >
                         Send Message
                     </button>

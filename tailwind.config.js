@@ -21,7 +21,8 @@ module.exports = {
         // 'portfolio': "url('images/stars.jpeg')",
         // 'portfolio-screen':"url(images/stars.jpeg)",
         'portfolio-cloud':"url(images/cloud.jpg)",
-        'myImage':"url(images/linked_in.jpg)"
+        'myImage':"url(images/linked_in.jpg)",
+        // 'backgroundImage':'url(images/backgroundImage.png)'
       },
       colors: {
         'dark-background': '#111827',

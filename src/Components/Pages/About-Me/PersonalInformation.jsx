@@ -10,7 +10,7 @@ const PersonalInformation = ({ label, value }) => {
             {label === EMAIL_LABEL ? (
                 <a 
                     href={`mailto:${My_Email}`} 
-                    className="text-[var(--color-primary-light)] xxs:text-[1.1rem] xs:text-[1.2rem] md:text-[1.3rem] lg:text-[1.4rem] xl:text-[1.5rem]">
+                    className="text-[--text-my-email] xxs:text-[1.1rem] xs:text-[1.2rem] md:text-[1.3rem] lg:text-[1.4rem] xl:text-[1.5rem]">
                     {value}
                 </a>
             ) : (

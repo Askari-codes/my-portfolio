@@ -7,7 +7,7 @@ function ContactItems() {
       {contactContect.addresses.map((item, index) => (
         <div key={index} className="flex items-center">
           <div className="flex-shrink-0">
-            <item.icon className="w-[1.5rem] h-[1.5rem] text-[--color-primary] hover:text-[var(--color-primary-light)]" />
+            <item.icon className="w-[1.5rem] h-[1.5rem] text-[--text-icon-contact] hover:text-[--text-icon-contact-hover]" />
           </div>
           <div className="ml-4">
             <h4 className="text-lg font-medium">{item.title}</h4>
