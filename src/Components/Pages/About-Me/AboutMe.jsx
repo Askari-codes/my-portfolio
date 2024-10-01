@@ -3,7 +3,6 @@ import PersonalInformation from './PersonalInformation';
 import { aboutMeContent, myPersonalInformation,RESUME_DOWNLOAD_URL } from '../../../Data/Data';
 import PageBackground from '../Shared/PageBackground';
 import { HiOutlineDocumentDownload } from 'react-icons/hi';
-import backgroundImage from '../../../tailwind/images/backgroundImage.png'
 
 function AboutMe() {
 
