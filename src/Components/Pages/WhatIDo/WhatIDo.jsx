@@ -5,12 +5,12 @@ import ServiceCard from './ServiceCard';
 
 function WhatIDo() {
     return (
-        <div className="min-h-screen font-[poppins]">
+        <div className=" font-[poppins]">
             <PageBackground 
                 pageBackgroundTitle={whatIDoContent.pageBackgroundTitle} 
                 pageTitle={whatIDoContent.pageTitle} 
             />
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:grid-cols-2 gap-4">
                 {whatIDoContent.services.map(item => (
                     <ServiceCard 
                         key={item.id} 

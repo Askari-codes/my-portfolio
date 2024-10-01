@@ -14,6 +14,7 @@
   --color-blue-250: #6fb3d5;
   --color-blue-200: #63a4d8;
   --color-blue-100: #b3c6ff;
+  --color-gray-850:#2f2f2f;
   --color-gray-700: #333333;
   --color-gray-600: #666666;
   --color-gray-400: #cccccc;
@@ -29,7 +30,7 @@
   --text-home-title: var(--color-blue-500);
   --text-highlight: var(--color-blue-200);
   --text-profile-name-header: var(--color-blue-500);
-  --text-profile-name-sidebar: var(--color-gray-700);
+  --text-profile-name-sidebar: var(--color-gray-850);
   --text-item-sidebar: var(--color-gray-700);
   --text-item-sidebar-hover: var(--color-blue-600);
   --text-social-media-hover: var(--color-gray-600);

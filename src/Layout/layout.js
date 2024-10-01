@@ -15,4 +15,5 @@ export const emailJsConfig = {
 };
 
 export const SCROLL_OFFSET = 20;
+export const SCROLL_THRESHOLD = 10;
 

@@ -6,11 +6,11 @@ import Skills from './Skills';
 
 function Resume() {
     return (
-        <div className="flex flex-col w-full min-h-screen bg-[--background-application] font-poppins">
+        <div className="flex flex-col w-full  bg-[--background-application] font-poppins">
             <div>
                 <PageBackground pageBackgroundTitle={resumeContent.pageBackgroundTitle} pageTitle={resumeContent.pageTitle} />
             </div>
-            <div className="grid p-2 min-h-screen md:grid-cols-[1fr_1fr] experiences">
+            <div className="grid p-2  md:grid-cols-[1fr_1fr] gap-4 experiences">
                 {resumeContent.sections.map((section, index) => (
                     <ResumeSection key={index} resumeTitle={section.title} items={section.items} />
                 ))}

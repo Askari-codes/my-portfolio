@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback } from "react";
 import useAppContext from "./hooks/useAppContext";
 import NavigationWrapper from "./Components/Navigation/NavigationWrapper";
 import { sections,sectionNames } from "./Data/Data";
-import { SCROLL_OFFSET } from "./Layout/layout";
+import { SCROLL_OFFSET,SCROLL_THRESHOLD } from "./Layout/layout";
 import clsx from "clsx";
 
 function App() {
@@ -32,32 +32,32 @@ function App() {
   
   const handleScroll = useCallback(() => {
     if (!scrollContainerRef.current || !sectionPositions.current) return;
-
-    const scrollPosition = scrollContainerRef.current.scrollTop;
-    let currentSection = sectionNames.HOME ; 
-
-
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const { id } = sections[i];
-      const position = sectionPositions.current[id] || 0;
-      if (scrollPosition >= position - SCROLL_OFFSET) {
-        currentSection = id;
-        break;
+  
+    const scrollContainer = scrollContainerRef.current;
+    const scrollPosition = scrollContainer.scrollTop;
+    const containerHeight = scrollContainer.clientHeight;
+    const scrollHeight = scrollContainer.scrollHeight;
+    let currentSection = sectionNames.HOME;
+  
+    if (scrollPosition + containerHeight >= scrollHeight - SCROLL_THRESHOLD) {
+      currentSection = sectionNames.CONTACT;
+    } else {
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const { id } = sections[i];
+        const position = sectionPositions.current[id] || 0;
+        if (scrollPosition >= position - SCROLL_OFFSET) {
+          currentSection = id;
+          break;
+        }
       }
     }
-
+  
     if (currentSection !== activeSection) {
       setActiveSection(currentSection);
       window.history.replaceState(null, "", `#${currentSection}`);
     }
-  }, [
-    activeSection,
-    scrollContainerRef,
-    sectionPositions,
-    setActiveSection,
-    
-  ]);
-
+  }, [activeSection, scrollContainerRef, sectionPositions, setActiveSection]);
+  
 
   const handleClick = useCallback(() => {
     if (isOpen) {

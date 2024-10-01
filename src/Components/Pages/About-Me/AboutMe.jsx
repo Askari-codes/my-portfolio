@@ -11,7 +11,7 @@ function AboutMe() {
     };
 
     return (
-        <div className="relative flex flex-col overflow-hidden min-h-screen p-4 z-0 text-justify w-full font-poppins ">
+        <div className="relative flex flex-col overflow-hidden  p-4 z-0 text-justify w-full font-poppins ">
             
             <div className="relative flex flex-col flex-grow min-h-full lg:gap-4">
                 <PageBackground pageBackgroundTitle={aboutMeContent.pageBackgroundTitle} pageTitle={aboutMeContent.pageTitle} />

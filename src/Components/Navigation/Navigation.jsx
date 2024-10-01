@@ -47,7 +47,7 @@ function Navigation({ type }) {
     <nav className={clsx(
       {
         'mt-0': type === navigationConfig.mobile,
-        'mt-10': type !== navigationConfig.mobile
+        'mt-10  h-1/2 flex flex-col justify-evenly flex-wrap': type !== navigationConfig.mobile
       }
     )}>
       {menuItemsData.map((item, index) => (

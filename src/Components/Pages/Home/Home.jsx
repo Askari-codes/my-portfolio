@@ -24,7 +24,7 @@ const Home = () => {
     };
 
     return (
-        <div className="relative grid items-center w-full min-h-screen grid-rows-[10fr,2fr]">
+        <div className="relative grid items-center w-full h-screen grid-rows-[10fr,2fr]">
             <VideoBackground />
             <div>
                 {homeContent.textItems.map((item, index) => (

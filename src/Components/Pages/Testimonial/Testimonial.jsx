@@ -12,7 +12,7 @@ function Testimonial() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative h-screen bg-[--background-application] text-[--color-text-primary] font-poppins">
+    <div className="relative  bg-[--background-application] text-[--color-text-primary] font-poppins">
       <PageBackground
         pageBackgroundTitle={testimonialContent.pageBackgroundTitle}
         pageTitle={testimonialContent.pageTitle}
