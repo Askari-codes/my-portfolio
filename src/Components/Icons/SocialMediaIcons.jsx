@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { IconsData } from '../../Data/Data';
 import { navigationConfig } from '../../Layout/layout';
 import Icon from './Icon';
