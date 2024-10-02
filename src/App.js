@@ -84,7 +84,7 @@ function App() {
   useEffect(() => {
       setActiveSection(sectionNames.HOME);
       window.history.replaceState(null, "", `#${sectionNames.HOME}`);
-  },[]);
+  },[setActiveSection]);
  
   return (
     <div
