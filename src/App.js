@@ -81,6 +81,10 @@ function App() {
     }
   }, [handleScroll, scrollContainerRef]);
 
+  useEffect(() => {
+      setActiveSection(sectionNames.HOME);
+      window.history.replaceState(null, "", `#${sectionNames.HOME}`);
+  },[]);
  
   return (
     <div

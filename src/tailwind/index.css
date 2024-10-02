@@ -8,10 +8,9 @@
 :root {
   --color-white: #ffffff;
   --color-red: #ff0000;
+  --color-blonde-100:#fdf5e6;
   --color-blue-700: #2b6cb0;
-  --color-blue-600: #0671a7;
   --color-blue-500: #1f7ba9;
-  --color-blue-250: #6fb3d5;
   --color-blue-200: #63a4d8;
   --color-blue-100: #b3c6ff;
   --color-gray-850:#2f2f2f;
@@ -22,7 +21,8 @@
 
   --color-text-primary: var(--color-black-900);
   --text-icon-social-media-sidebar: var(--color-gray-700);
-  --text-icon-social-media-header: var(--color-blue-500);
+  --text-icon-social-media-header-close-navigation: var(--color-blue-500);
+  --text-icon-social-media-header-open-navigation: var(--color-blonde-100);
   --text-icon-service: var(--color-blue-200);
   --text-icon-contact: var(--color-blue-200);
   --text-icon-contact-hover: var(--color-blue-500);
@@ -30,11 +30,15 @@
   --text-home-title: var(--color-blue-500);
   --text-highlight: var(--color-blue-200);
   --text-profile-name-header: var(--color-blue-500);
+  --text-profile-name-header-open: var(--color-blonde-100);
   --text-profile-name-sidebar: var(--color-gray-850);
   --text-item-sidebar: var(--color-gray-700);
-  --text-item-sidebar-hover: var(--color-blue-600);
-  --text-social-media-hover: var(--color-gray-600);
+  --text-item-sidebar-hover: var(--color-gray-400);
+  --text-item-header:var(--color-blonde-100);
+  --text-item-header-hover: var(--color-gray-400);
+  --text-social-media-hover: var(--color-gray-400);
   --text-job-title-card-resume: var(--color-gray-700);
+  --text-company-card-resume:var(--color-blue-700);
   --text-title-service: var(--color-gray-700);
   --text-job-title-testimonial: #a0aec0;
   --text-icon-toast-error: var(--color-red);
@@ -45,7 +49,10 @@
   --background-page-title: var(--color-blue-200);
   --background-cards: #f2f4f8;
   --background-hamburger-icon: var(--color-blue-500);
-  --background-item-sidebar-hover: var(--color-blue-700);
+  --background-hamburger-icon-open: var(--color-blonde-100);
+  --background-item-sidebar: var(--color-blue-700);
+  --background-header:var(--color-blue-700);
+  --background-item-header-active:var(--color-blue-200);
   --background-button: var(--color-blue-200);
   --background-button-hover: var(--color-blue-500);
   --background-toast-success: var(--color-blue-500);
@@ -54,6 +61,7 @@
   --border-image: var(--color-gray-600);
   --border-cards: var(--color-gray-400);
   --border-email-box: var(--color-blue-100);
+  --border-header:var(--color-gray-400);
 }
 
 *,
@@ -88,13 +96,7 @@ h1 {
   .emailBox-input {
     @apply mt-1 w-full bg-[--color-white] text-[--color-text-primary] border-[1px] border-[--border-email-box] text-[1rem] rounded py-2 px-3 focus:border-[--color-blue-700] focus:outline-none;
   }
-  .testimonial-swiper {
-    .custom-pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-  }
+  
 }
 
 .poppins-regular {

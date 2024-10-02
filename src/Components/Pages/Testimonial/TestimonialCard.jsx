@@ -11,7 +11,7 @@ function TestimonialCard({ name, jobRole, image, testimonial }) {
           loading="lazy"
         />
         <div>
-          <div className="text-lg font-semibold text-[--color-blue-700]">
+          <div className="text-lg font-semibold text-[--text-company-card-resume]">
             {name}
           </div>
           <div className="text-sm text-[--text-job-title-testimonial] md:text-base">

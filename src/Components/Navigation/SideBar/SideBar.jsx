@@ -8,7 +8,7 @@ import { Profile_Name } from '../../../Data/Data';
 const Sidebar = ({ type,isVisible }) => {
  
   return (
-    <aside className={`${isVisible?'':'hidden'} fixed top-0 left-0 flex flex-col  w-[250px] h-full bg-[--background-sidebar] z-10 overflow-auto`}>
+    <aside className={`${isVisible?'':'hidden'} fixed top-0 left-0 flex flex-col overflow-x-hidden  w-[250px] h-full bg-[--background-sidebar] z-10 overflow-auto`}>
     
       <div className="my-8 flex flex-col items-center h-1/6">
         <img

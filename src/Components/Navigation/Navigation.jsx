@@ -46,27 +46,35 @@ function Navigation({ type }) {
   return (
     <nav className={clsx(
       {
-        'mt-0': type === navigationConfig.mobile,
-        'mt-10  h-1/2 flex flex-col justify-evenly flex-wrap': type !== navigationConfig.mobile
+        'mt-0 ': type === navigationConfig.mobile,
+        'mt-10  h-1/2 flex flex-col justify-center flex-wrap': type !== navigationConfig.mobile
       }
     )}>
       {menuItemsData.map((item, index) => (
         <button
           key={index}
           className={clsx(
-            'w-full text-lg text-[--text-item-sidebar] xxs:text-[1rem] md:text-[1.1rem]  transition-colors duration-300',
+            'w-full text-lg text-[--text-item-sidebar] xxs:text-[1rem] md:text-[1.1rem] transition-colors duration-300',
             {
-              'font-bold  text-[--color-text-primary] hover:bg-[--background-item-sidebar-hover] transition-colors duration-500 delay-400 ': activeSection === item.path.replace("#", ""),
-              ' hover:text-[--text-item-sidebar-hover] font-medium hover:font-semibold ': activeSection !== item.path.replace("#", "")
+              'font-bold text-[var(--color-white)] bg-[--background-item-sidebar] hover:scale-110 transition-colors duration-500 delay-400 ' : type === navigationConfig.desktop && activeSection === item.path.replace("#", ""),
+
+              'hover:text-[--text-item-sidebar-hover] font-medium hover:font-bold':type === navigationConfig.desktop && activeSection !== item.path.replace("#", ""),
             },
             {
-              'flex px-4 py-2 bg-[--background-application] text-[--text-item-sidebar] font-semibold  ': type === navigationConfig.mobile
+              'flex px-4 py-2  text-[var(--text-item-header)] hover:text-[--text-item-header-hover] font-semibold h-[50px]': type === navigationConfig.mobile,
+
+              'bg-[--background-item-header-active] hover:text-[--text-item-header]   hover:text-[19px] ': type === navigationConfig.mobile && activeSection === item.path.replace("#", ""),
             },
-            {'flex justify-center p-4 border-none':type===navigationConfig.desktop},
             {
-              'border-[1px]': item.label !== CONTACT_LABLE
+              'flex justify-center p-4 border-none': type === navigationConfig.desktop,
+            },
+            {
+              'border-b-[1px] border-[--border-header] ': item.label !== CONTACT_LABLE,
             }
           )}
+
+
+
           onClick={() => handleLinkClick(item.path.replace("#", ""))}
         >
           {item.label}

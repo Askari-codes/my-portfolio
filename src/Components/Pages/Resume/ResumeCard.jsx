@@ -6,7 +6,7 @@ function ResumeCard({ date, title, Content, company }) {
             <span className="w-[100px] text-center font-medium text-[--color-text-primary] rounded">
                 {date}
             </span>
-            <span className="flex items-center h-[35px] font-semibold text-[--color-blue-700] lg:font-medium">
+            <span className="flex items-center h-[35px] font-semibold text-[--text-company-card-resume] lg:font-medium">
                 {company}
             </span>
             <div className="h-[30px] text-[16px] text-[--text-job-title-card-resume]">
