@@ -288,14 +288,6 @@ export const testimonialContent = {
       testimonial:
         "Hardworking and logical, Mohammad is one of my most capable colleagues. If an organization is seeking someone who is dedicated to their work and brings creativity to the table ",
     },
-    {
-      id: 3,
-      name: "Masoud Aqaei",
-      jobRole: "Senior Frontend ",
-      image: arghun,
-      testimonial:
-        "Mohammad showed significant growth as a junior frontend developer. His eagerness to learn and quick grasp of complex concepts made him invaluable to our team. I look forward to his continued success",
-    },
   ],
 };
 

@@ -3,12 +3,14 @@ import PageBackground from '../Shared/PageBackground';
 import TestimonialCard from './TestimonialCard';
 import { testimonialContent } from '../../../Data/Data';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 function Testimonial() {
+  const isSmall = useMediaQuery("(max-width:768px)")
   const swiperRef = useRef(null);
 
   return (
@@ -23,11 +25,11 @@ function Testimonial() {
           modules={[Pagination]}
           spaceBetween={30}
           slidesPerView={1}
-          pagination={{ clickable: true, el: '.custom-pagination ' }}
+          pagination={isSmall?true:false}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2 },
+           
           }}
           loop={true}
           speed={600}
@@ -48,7 +50,6 @@ function Testimonial() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="custom-pagination mt-4 flex justify-center"></div>
       </div>
     </div>
   );
