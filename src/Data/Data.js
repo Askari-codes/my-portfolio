@@ -1,6 +1,5 @@
 import shahin from "../tailwind/images/shahin.jpeg";
 import arezoo from "../tailwind/images/arezoo.jpeg";
-import arghun from "../tailwind/images/arghun.jpeg";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import Home from "../Components/Pages/Home/Home";
 import AboutMe from '../Components/Pages/About-Me/AboutMe';
