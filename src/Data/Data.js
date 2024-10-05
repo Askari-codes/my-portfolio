@@ -1,5 +1,3 @@
-import shahin from "../tailwind/images/shahin.jpeg";
-import arezoo from "../tailwind/images/arezoo.jpeg";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import Home from "../Components/Pages/Home/Home";
 import AboutMe from '../Components/Pages/About-Me/AboutMe';
@@ -56,11 +54,11 @@ export const sectionNames = {
 
 
 export const myPersonalInformation = [
+  { label: "Name", value: "Mohammad Askari" },
   { label: "Email", value: My_Email },
   { label: "Age", value: "33" },
   { label: "From", value: "Utrecht" },
   { label: "Experience", value: "3+ Years" },
-  { label: "Name", value: "Mohammad Askari" },
 ];
 
 export const homeContent = {
@@ -83,7 +81,7 @@ export const homeContent = {
     {
       text: "I'm a frontend developer",
       className:
-        "p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-white",
+        "p-[0.5rem] xxs:text-[1.5rem] xs:text-[1.7rem] md:text-[2rem] xl:text-[2.5rem] text-center text-[--text-home-title-explanation]",
       initial: "hidden",
       variant: {
         hidden: { opacity: 0.1 },
@@ -101,7 +99,7 @@ export const homeContent = {
     {
       text: "Crafting beautiful and functional web experiences",
       className:
-        "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-white",
+        "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-[--text-home-title-explanation]",
       initial: "hidden",
       variant: {
         hidden: { opacity: 0 },
@@ -120,7 +118,7 @@ export const homeContent = {
   buttonSection: {
     text: "Get To Know Me",
     className:
-      "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-white font-semibold",
+      "p-0.51rem xxs:text-[1rem] xs:text-[1.4rem] md:text-[1.5rem] xl:text-[2rem] text-center text-[--text-home-title-explanation] font-semibold",
     initial: "hidden",
     variant: {
       hidden: { opacity: 0 },
@@ -210,10 +208,10 @@ export const resumeContent = {
   pageTitle: "Resume",
   languages: "English-Farsi",
   skillsData: [
-    { skill: "Web Design", percentage: 65 },
-    { skill: "React JS", percentage: 85 },
-    { skill: "JavaScript", percentage: 70 },
-    { skill: "Redux", percentage: 70 },
+    { skill: "React JS", percentage: 90 },
+    { skill: "JavaScript", percentage: 80 },
+    { skill: "Redux", percentage: 90 },
+    { skill: "Web Design", percentage: 70 },
     { skill: "Scrum", percentage: 90 },
     { skill: "Tailwind", percentage: 90 },
   ],
@@ -275,7 +273,7 @@ export const testimonialContent = {
       id: 1,
       name: "Arezou Zahedi",
       jobRole: "Backend Developer",
-      image: arezoo,
+      image:"images/arezoo.jpeg",
       testimonial:
         "Worked with Mohammad for a year at Chargoon as a frontend developer. Delivered high-quality work, tackled challenges with ease, and was an excellent team player. Highly recommend him—he’s a valuable asset.",
     },
@@ -283,7 +281,7 @@ export const testimonialContent = {
       id: 2,
       name: "Shahin Azedi",
       jobRole: "Product Owner",
-      image: shahin,
+      image: 'images/shahin.jpeg',
       testimonial:
         "Hardworking and logical, Mohammad is one of my most capable colleagues. If an organization is seeking someone who is dedicated to their work and brings creativity to the table ",
     },

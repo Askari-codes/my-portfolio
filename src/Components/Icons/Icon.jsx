@@ -13,9 +13,7 @@ const Icon = ({ name, className, href }) => {
     if (!IconComponent) {
         return null;
     }
-
     const iconElement = <IconComponent className={className} />;
-
     if (href) {
         return (
             <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
@@ -23,8 +21,6 @@ const Icon = ({ name, className, href }) => {
             </a>
         );
     }
-
     return iconElement;
 }
-
 export default Icon;

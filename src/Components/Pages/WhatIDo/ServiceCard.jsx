@@ -10,7 +10,7 @@ function ServiceCard({ title, content, icon }) {
                     {title}
                 </div>
             </div>
-            <div className="min-h-[150px] text-justify leading-7 text-[--color-text-primary] md:text-[15px] lg:text-[16px] 2xl:text-[18px] service-content">
+            <div className="min-h-[150px] text-justify leading-7 text-[--text-contact-service] md:text-[15px] lg:text-[16px] 2xl:text-[18px] service-content">
                 {content}
             </div>
         </div>

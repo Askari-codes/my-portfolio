@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import AppContext from './AppContext';
 import {sections} from '../../Data/Data'
 
@@ -7,6 +7,7 @@ function AppProvider({ children }) {
   const [activeSection, setActiveSection] = useState(sections[0].id);
   const [isHomeClicked, setIsHomeClicked] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isDarkMode,setIsDarkMode] = useState(true)
 
   const scrollContainerRef = useRef(null);
 
@@ -19,7 +20,9 @@ function AppProvider({ children }) {
     contact: useRef(null),
   };
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const toggleMenu = useCallback(()=>{
+    setIsOpen((prev) => !prev);
+  },[isOpen])
   const closeMenu = () => setIsOpen(false);
 
   return (
@@ -37,6 +40,8 @@ function AppProvider({ children }) {
         isScrolling,
         setIsScrolling,
         scrollContainerRef, 
+        isDarkMode,
+        setIsDarkMode
       }}
     >
       {children}

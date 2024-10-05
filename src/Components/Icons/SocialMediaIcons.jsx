@@ -6,7 +6,8 @@ import clsx from 'clsx'
 import useAppContext from '../../hooks/useAppContext';
 
 function SocialMediaIcons({ className, type }) {
- const {isOpen} = useAppContext()
+  const { isOpen } = useAppContext()
+
   return (
     <div className={className}>
       {IconsData.map((item) => (
@@ -14,8 +15,8 @@ function SocialMediaIcons({ className, type }) {
           className={clsx(
             'text-2xl  hover:text-[--text-social-media-hover] transition-colors duration-300"',
             { 'text-[--text-icon-social-media-sidebar]': type === navigationConfig.desktop },
-            { 'text-[--text-icon-social-media-header-close-navigation]': type === navigationConfig.mobile },
-            { 'text-[--text-icon-social-media-header-open-navigation]': type === navigationConfig.mobile&&isOpen }
+            { 'text-[--text-icon-social-media-header-close-navigation] hover:text-[--text-icon-social-media-header-close-navigation-hover]': type === navigationConfig.mobile && !isOpen },
+            { 'text-[--text-icon-social-media-header-open-navigation]  ': type === navigationConfig.mobile && isOpen }
           )}
           key={item.name}
           name={item.name}

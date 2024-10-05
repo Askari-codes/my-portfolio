@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import "reset.css";
-@import "style.css";
+
 
 :root {
   --color-white: #ffffff;
@@ -17,51 +17,174 @@
   --color-gray-700: #333333;
   --color-gray-600: #666666;
   --color-gray-400: #cccccc;
+  --color-gray-300:#a0aec0;
+  --color-gray-100:#f0f4f8;
+  --color-gray-50:#f2f4f8;
   --color-black-900: #1b1b1b;
+
+  
 
   --color-text-primary: var(--color-black-900);
   --text-icon-social-media-sidebar: var(--color-gray-700);
   --text-icon-social-media-header-close-navigation: var(--color-blue-500);
-  --text-icon-social-media-header-open-navigation: var(--color-blonde-100);
+  --text-icon-social-media-header-close-navigation-hover:var(--color-blue-200) ; 
+  --text-icon-social-media-header-open-navigation: var(--color-blue-500);
   --text-icon-service: var(--color-blue-200);
   --text-icon-contact: var(--color-blue-200);
   --text-icon-contact-hover: var(--color-blue-500);
   --text-my-email: var(--color-blue-200);
   --text-home-title: var(--color-blue-500);
+  --text-home-title-explanation:var(--color-white);
   --text-highlight: var(--color-blue-200);
   --text-profile-name-header: var(--color-blue-500);
-  --text-profile-name-header-open: var(--color-blonde-100);
+  --text-profile-name-header-open: var(--color-blue-500);
   --text-profile-name-sidebar: var(--color-gray-850);
   --text-item-sidebar: var(--color-gray-700);
   --text-item-sidebar-hover: var(--color-gray-400);
-  --text-item-header:var(--color-blonde-100);
-  --text-item-header-hover: var(--color-gray-400);
+  --text-item-header:var(--color-blue-500);
+  --text-item-header-hover: var(--color-blue-200);
   --text-social-media-hover: var(--color-gray-400);
   --text-job-title-card-resume: var(--color-gray-700);
   --text-company-card-resume:var(--color-blue-700);
   --text-title-service: var(--color-gray-700);
-  --text-job-title-testimonial: #a0aec0;
+  --text-job-title-testimonial:var(--color-gray-850);
   --text-icon-toast-error: var(--color-red);
+  --text-introduction-home:var(--color-gray-850);
+  --text-content-about-me:var(--color-gray-850);
+  --text-personal-information-about-me:var(--color-gray-850);
+  --text-contact-service:var(--color-gray-850);
+  --text-dat-resume-card:var(--color-gray-850);
+  --text-content-card-resume:var(--color-gray-700);
+  --text-colleague-name: var(--color-blue-500); 
+  --text-content-testimonial:var(--color-gray-700);
+  --text-icon-contact-title:var(--color-gray-850);
+  --text-icon-contact-description:var(--color-gray-700);
+  --text-label-email-input:var(--color-gray-850);
+  --text-item-header-active:var(--color-white);
+  --text-hamburger-icon: var(--color-blue-500);
+  --text-hamburger-icon-open: var(--color-blue-500);
 
-  --background-application: #f0f4f8;
+
+  --background-application: var(--color-gray-100);
   --background-sidebar: var(--color-blue-200);
   --background-skills: var(--color-blue-200);
-  --background-page-title: var(--color-blue-200);
-  --background-cards: #f2f4f8;
-  --background-hamburger-icon: var(--color-blue-500);
-  --background-hamburger-icon-open: var(--color-blonde-100);
+  --text-page-title: var(--color-blue-200);
+  --background-cards: var(--color-gray-100);
+ 
   --background-item-sidebar: var(--color-blue-700);
-  --background-header:var(--color-blue-700);
+  --background-header:var(--color-gray-100);
   --background-item-header-active:var(--color-blue-200);
   --background-button: var(--color-blue-200);
   --background-button-hover: var(--color-blue-500);
   --background-toast-success: var(--color-blue-500);
   --background-progress-error-toast: var(--color-red);
+  --background-email-box:var(--color-gray-100);
+  --background-email-box-focus:var(--color-gray-50);
+  --text-email-box-focus:var(--color-gray-700);
+  --text-icon-night-mode:var(--color-blue-100);
+  
 
   --border-image: var(--color-gray-600);
   --border-cards: var(--color-gray-400);
   --border-email-box: var(--color-blue-100);
+  --border-email-box-focus:var(--color-blue-200);
   --border-header:var(--color-gray-400);
+}
+
+.dark{
+  --color-gray-900: #121212; 
+  --color-gray-800: #1E1E1E; 
+  
+  
+  --color-purple-500: #BB86FC; 
+  --color-teal-500: #03DAC6; 
+  
+  
+  --color-gray-100: #E0E0E0; 
+  --color-gray-200: #B0B0B0; 
+  --color-yellow-500: #FFD54F; 
+  --color-yellow-600:#E6C84B;
+  --color-green-400:#66BB6A;
+
+  --color-gray-700: #282828; 
+  --color-gray-600: #333333; 
+  
+  --color-red-500: #CF6679; 
+  
+  
+  --color-gray-400: #2C2C2C; 
+
+  
+    --color-text-primary: var(--color-gray-100); 
+    --text-icon-social-media-header-close-navigation: var(--color-gray-100); 
+    --text-icon-social-media-header-close-navigation-hover: var(--color-gray-200); 
+    --text-icon-social-media-header-open-navigation: var(--color-gray-200); 
+    --text-icon-service: var(--color-yellow-600); 
+    --text-icon-contact: var(--color-gray-200); 
+    --text-icon-contact-hover: var(--color-yellow-600); 
+    --text-my-email: var(--color-yellow-600); 
+    --text-home-title: var(--color-yellow-500); 
+    --text-home-title-explanation: var(--color-gray-100); 
+    --text-highlight: var(--color-yellow-500); 
+    --text-profile-name-header: var(--color-gray-100); 
+    --text-profile-name-header-open: var(--color-gray-100); 
+    --text-introduction-home:var(--color-gray-100);
+    --text-icon-social-media-sidebar: var(--color-gray-200);   
+    --text-item-sidebar: var(--color-gray-200); 
+    --text-item-sidebar-hover: var(--color-gray-100);
+    --text-profile-name-sidebar: var(--color-gray-100);
+    --text-page-title: var(--color-gray-100); 
+    --text-skills:var(--color-yellow-600);
+    --text-content-about-me:var(--color-gray-200);
+    --text-personal-information-about-me:var(--color-gray-100);
+    --text-contact-service:var(--color-gray-200);
+    --text-dat-resume-card:var(--color-gray-100);
+    --text-job-title-card-resume: var(--color-gray-100);
+    --text-content-card-resume:var(--color-gray-200);
+    --text-company-card-resume:var(--color-yellow-600);
+    --text-label-email-input:var(--color-gray-100);
+
+    --text-item-header: var(--color-gray-200); 
+    --text-item-header-hover: var(--color-gray-100);
+    --text-social-media-hover: var(--color-gray-100);
+    --text-resume-section-title:var(--color-gray-100);
+    --text-colleague-name: var(--color-yellow-600); 
+    --text-title-service: var(--color-gray-100); 
+    --text-job-title-testimonial: var(--color-gray-100); 
+    --text-content-testimonial:var(--color-gray-200);
+    --text-icon-toast-error: var(--color-red-500); 
+    --text-icon-contact-title:var(--color-gray-100);
+    --text-icon-contact-description:var(--color-gray-200);
+    --text-icon-day-mode:var(--color-yellow-500);
+    --text-hamburger-icon: var(--color-gray-100); 
+    --text-hamburger-icon-open: var(--color-gray-100); 
+    
+    
+    --background-application: var(--color-gray-900); 
+    --background-sidebar: var(--color-gray-800); 
+    --background-skills: var(--color-gray-100); 
+    --background-cards: var(--color-gray-800); 
+   
+    --background-item-sidebar: var(--color-yellow-600);
+    --background-item-sidebar-hover: var(--color-yellow-500);
+    
+    --background-email-box:var(--color-gray-700);
+    --background-email-box-focus:var(--color-gray-600);
+
+    --background-header: var(--color-gray-900); 
+    --background-item-header-active: var(--color-gray-700); 
+    --background-button: var(--color-yellow-600); 
+    --background-button-hover: var(--color-yellow-500); 
+    --background-toast-success: var(--color-gray-600); 
+    --background-progress-error-toast: var(--color-red-500); 
+    --text-email-box-focus:var(--color-gray-100);
+  
+    
+    --border-image: var(--color-gray-600); 
+    --border-cards: var(--color-gray-400); 
+    --border-email-box: var(--color-gray-200); 
+    --border-email-box-focus:var(--color-gray-100);
+    --border-header: var(--color-gray-400); 
 }
 
 *,
@@ -79,22 +202,29 @@ h1 {
   font-weight: 600;
 }
 @layer utilities {
+  .dark input:-webkit-autofill,
+  .dark input:-webkit-autofill:hover,
+  .dark input:-webkit-autofill:focus,
+  .dark textarea:-webkit-autofill,
+  .dark textarea:-webkit-autofill:hover,
+  .dark textarea:-webkit-autofill:focus,
+  .dark select:-webkit-autofill,
+  .dark select:-webkit-autofill:hover,
+  .dark select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-gray-600) inset !important; 
+    -webkit-text-fill-color: var(--color-gray-200) !important; 
+    transition: background-color 1ms ease-in-out 1s;
+  }
 }
 
-@layer components {
-}
+
 
 @layer components {
   .border-information {
     border-bottom: 3px solid rgba(160, 155, 147, 0.5);
   }
-
- 
- 
-  
- 
   .emailBox-input {
-    @apply mt-1 w-full bg-[--color-white] text-[--color-text-primary] border-[1px] border-[--border-email-box] text-[1rem] rounded py-2 px-3 focus:border-[--color-blue-700] focus:outline-none;
+    @apply  mt-1 w-full  text-gray-100   border-[1px] border-[--border-email-box] text-[1rem] rounded py-2 px-3 focus:text-[--text-email-box-focus] bg-[--background-email-box] focus:bg-[--background-email-box-focus] focus:border-[--border-email-box-focus] focus:outline-none;
   }
   
 }

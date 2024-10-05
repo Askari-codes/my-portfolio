@@ -56,14 +56,14 @@ function Navigation({ type }) {
           className={clsx(
             'w-full text-lg text-[--text-item-sidebar] xxs:text-[1rem] md:text-[1.1rem] transition-colors duration-300',
             {
-              'font-bold text-[var(--color-white)] bg-[--background-item-sidebar] hover:scale-110 transition-colors duration-500 delay-400 ' : type === navigationConfig.desktop && activeSection === item.path.replace("#", ""),
+              'font-bold text-[var(--color-white)] bg-[--background-item-sidebar] hover:bg-[--background-item-sidebar-hover] hover:scale-110 transition-colors duration-500 delay-400 ' : type === navigationConfig.desktop && activeSection === item.path.replace("#", ""),
 
               'hover:text-[--text-item-sidebar-hover] font-medium hover:font-bold':type === navigationConfig.desktop && activeSection !== item.path.replace("#", ""),
             },
             {
               'flex px-4 py-2  text-[var(--text-item-header)] hover:text-[--text-item-header-hover] font-semibold h-[50px]': type === navigationConfig.mobile,
 
-              'bg-[--background-item-header-active] hover:text-[--text-item-header]   hover:text-[19px] ': type === navigationConfig.mobile && activeSection === item.path.replace("#", ""),
+              'bg-[--background-item-header-active] text-[var(--text-item-header-active)] hover:text-[var(--text-item-header-active)]   hover:text-[19px] ': type === navigationConfig.mobile && activeSection === item.path.replace("#", ""),
             },
             {
               'flex justify-center p-4 border-none': type === navigationConfig.desktop,

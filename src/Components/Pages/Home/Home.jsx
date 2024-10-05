@@ -2,12 +2,13 @@ import React from 'react';
 import VideoBackground from '../../VideoBackground';
 import Lottie from 'lottie-react';
 import narrowIcon from '../../../Assets/animations/narrowIcon.json';
+import narrowIconYellow from '../../../Assets/animations/narrowIconYellow.json'
 import useAppContext from '../../../hooks/useAppContext';
 import { homeContent } from '../../../Data/Data';
 import AnimatedTextLine from './AnimatedTextLine';
 
 const Home = () => {
-    const { sectionRefs, scrollContainerRef } = useAppContext();
+    const { sectionRefs, scrollContainerRef, isDarkMode } = useAppContext();
 
     const handleClick = () => {
         if (
@@ -37,7 +38,6 @@ const Home = () => {
                     />
                 ))}
             </div>
-
             <div className="flex flex-col items-center justify-center opacity-95">
                 <AnimatedTextLine
                     text={homeContent.buttonSection.text}
@@ -47,11 +47,9 @@ const Home = () => {
                 />
                 <button
                     onClick={handleClick}
-                    className="flex flex-col items-center justify-center w-full gap-2 px-6 py-3 text-white rounded-md opacity-95"
                 >
                     <Lottie
-                        className="text-white"
-                        animationData={narrowIcon}
+                        animationData={isDarkMode ? narrowIconYellow : narrowIcon}
                         loop={true}
                         style={{ width: 100, height: 100 }}
                     />

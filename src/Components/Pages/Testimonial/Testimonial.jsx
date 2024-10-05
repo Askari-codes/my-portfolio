@@ -4,7 +4,6 @@ import TestimonialCard from './TestimonialCard';
 import { testimonialContent } from '../../../Data/Data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useMediaQuery from '../../../hooks/useMediaQuery';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
@@ -14,7 +13,7 @@ function Testimonial() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative   bg-[--background-application] text-[--color-text-primary] font-poppins">
+    <div className="relative font-poppins">
       <PageBackground
         pageBackgroundTitle={testimonialContent.pageBackgroundTitle}
         pageTitle={testimonialContent.pageTitle}

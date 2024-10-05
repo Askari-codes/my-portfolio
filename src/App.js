@@ -9,6 +9,7 @@ function App() {
   const {
     isOpen,
     closeMenu,
+    isDarkMode,
     sectionRefs,
     activeSection,
     setActiveSection,
@@ -88,9 +89,15 @@ function App() {
  
   return (
     <div
+    
       onClick={handleClick}
-      className="relative w-full h-screen bg-[--background-application]"
+      className={clsx(
+        'relative w-full h-screen bg-[--background-application] ',
+        {'dark':isDarkMode},
+        {'':!isDarkMode}
+      )}
     >
+    
       <div className="w-frll h-full lg:grid lg:h-full lg:grid-cols-[250px_1fr]">
         <NavigationWrapper
           sectionRefs={sectionRefs}
