@@ -20,9 +20,9 @@ function AppProvider({ children }) {
     contact: useRef(null),
   };
 
-  const toggleMenu = useCallback(()=>{
+  const toggleMenu = ()=>{
     setIsOpen((prev) => !prev);
-  },[isOpen])
+  }
   const closeMenu = () => setIsOpen(false);
 
   return (
