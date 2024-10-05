@@ -56,7 +56,7 @@ function Navigation({ type }) {
           className={clsx(
             'w-full text-lg text-[--text-item-sidebar] xxs:text-[1rem] md:text-[1.1rem] transition-colors duration-300',
             {
-              'font-bold text-[var(--color-white)] bg-[--background-item-sidebar] hover:bg-[--background-item-sidebar-hover] hover:scale-110 transition-colors duration-500 delay-400 ' : type === navigationConfig.desktop && activeSection === item.path.replace("#", ""),
+              'font-bold text-[var(--color-white)] bg-[--background-item-sidebar]  hover:scale-110 transition-colors duration-500 delay-400 ' : type === navigationConfig.desktop && activeSection === item.path.replace("#", ""),
 
               'hover:text-[--text-item-sidebar-hover] font-medium hover:font-bold':type === navigationConfig.desktop && activeSection !== item.path.replace("#", ""),
             },
