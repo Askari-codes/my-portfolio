@@ -89,6 +89,7 @@
   --border-email-box: var(--color-blue-100);
   --border-email-box-focus:var(--color-blue-200);
   --border-header:var(--color-gray-400);
+  --border-item-header:var(--color-gray-400);
 }
 
 .dark{
@@ -184,7 +185,8 @@
     --border-cards: var(--color-gray-400); 
     --border-email-box: var(--color-gray-200); 
     --border-email-box-focus:var(--color-gray-100);
-    --border-header: var(--color-gray-400); 
+    --border-header:var(--color-gray-700);
+    --border-item-header: var(--color-gray-400); 
 }
 
 *,

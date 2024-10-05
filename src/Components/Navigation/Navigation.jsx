@@ -69,7 +69,7 @@ function Navigation({ type }) {
               'flex justify-center p-4 border-none': type === navigationConfig.desktop,
             },
             {
-              'border-b-[1px] border-[--border-header] ': item.label !== CONTACT_LABLE,
+              'border-b-[1px] border-[--border-item-header] ': item.label !== CONTACT_LABLE,
             }
           )}
 

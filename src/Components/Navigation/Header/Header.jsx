@@ -20,7 +20,7 @@ function Header({ type, isVisible }) {
     >
       <div className={clsx(
         'flex items-center justify-between w-full px-4 ',
-        { 'py-3 border-b-[1px]': isOpen },
+        { 'py-3 border-b-[1px] border-[var(--border-header)]': isOpen },
         { 'h-16 ': !isOpen }
       )}>
         <h1 className={clsx(
