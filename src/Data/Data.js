@@ -40,7 +40,7 @@ export const Profile_Name = "Mohammad Askari";
 
 export const My_Email = "askari.codes@gmail.com";
 
-export const RESUME_DOWNLOAD_URL = `${process.env.PUBLIC_URL}/my_resume.pdf`
+export const RESUME_DOWNLOAD_URL = `${process.env.PUBLIC_URL}/resume.pdf`
 
 export const sectionNames = {
   HOME: "home",
