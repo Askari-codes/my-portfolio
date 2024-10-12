@@ -210,8 +210,9 @@ export const resumeContent = {
   skillsData: [
     { skill: "React JS", percentage: 90 },
     { skill: "JavaScript", percentage: 80 },
+    { skill: "Next JS", percentage: 85 },
+    { skill: "TypeScript", percentage: 75 },
     { skill: "Redux", percentage: 90 },
-    { skill: "Web Design", percentage: 70 },
     { skill: "Scrum", percentage: 90 },
     { skill: "Tailwind", percentage: 90 },
   ],
