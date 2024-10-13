@@ -13,7 +13,7 @@ function SocialMediaIcons({ className, type }) {
       {IconsData.map((item) => (
         <Icon
           className={clsx(
-            'text-2xl  hover:text-[--text-social-media-hover] transition-colors duration-300"',
+            'text-2xl  hover:text-[--text-icon-social-media-hover] transition-colors duration-300"',
             { 'text-[--text-icon-social-media-sidebar]': type === navigationConfig.desktop },
             { 'text-[--text-icon-social-media-header-close-navigation] hover:text-[--text-icon-social-media-header-close-navigation-hover]': type === navigationConfig.mobile && !isOpen },
             { 'text-[--text-icon-social-media-header-open-navigation]  ': type === navigationConfig.mobile && isOpen }

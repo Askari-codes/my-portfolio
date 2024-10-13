@@ -29,6 +29,7 @@
   --text-icon-social-media-header-close-navigation: var(--color-blue-500);
   --text-icon-social-media-header-close-navigation-hover:var(--color-blue-200) ; 
   --text-icon-social-media-header-open-navigation: var(--color-blue-500);
+  --background-icon-social-media-tooltip: var(--color-blue-700);
   --text-icon-service: var(--color-blue-200);
   --text-icon-contact: var(--color-blue-200);
   --text-icon-contact-hover: var(--color-blue-500);
@@ -43,12 +44,13 @@
   --text-item-sidebar-hover: var(--color-gray-400);
   --text-item-header:var(--color-blue-500);
   --text-item-header-hover: var(--color-blue-200);
-  --text-social-media-hover: var(--color-gray-400);
+  --text-icon-social-media-hover: var(--color-gray-400);
   --text-job-title-card-resume: var(--color-gray-700);
   --text-company-card-resume:var(--color-blue-700);
   --text-title-service: var(--color-gray-700);
   --text-job-title-testimonial:var(--color-gray-850);
   --text-icon-toast-error: var(--color-red);
+  --text-icon-social-media-tooltip:var(--color-gray-400);
   --text-introduction-home:var(--color-gray-850);
   --text-content-about-me:var(--color-gray-850);
   --text-personal-information-about-me:var(--color-gray-850);
@@ -143,6 +145,7 @@
     --text-job-title-card-resume: var(--color-gray-100);
     --text-content-card-resume:var(--color-gray-200);
     --text-company-card-resume:var(--color-yellow-600);
+    --text-icon-social-media-tooltip:var(--color-gray-100);
     --text-label-email-input:var(--color-gray-100);
 
     --text-item-header: var(--color-gray-200); 
@@ -172,7 +175,8 @@
     --background-email-box:var(--color-gray-700);
     --background-email-box-focus:var(--color-gray-600);
 
-    --background-header: var(--color-gray-900); 
+    --background-header: var(--color-gray-900);
+    --background-icon-social-media-tooltip: var(--color-gray-700); 
     --background-item-header-active: var(--color-gray-700); 
     --background-button: var(--color-yellow-600); 
     --background-button-hover: var(--color-yellow-500); 
