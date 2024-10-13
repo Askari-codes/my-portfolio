@@ -21,7 +21,7 @@ export const sections = [
 
 export const IconsData = [
   { name: "linkedin", href: "https://www.linkedin.com/in/mohammad-askarii/" },
-  { name: "github", href: "https://github.com/askari-fahlyani" },
+  { name: "github", href: "https://github.com/Askari-codes" },
 ];
 
 export const menuItemsData = [
