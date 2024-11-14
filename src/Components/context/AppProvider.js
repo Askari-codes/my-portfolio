@@ -16,6 +16,7 @@ function AppProvider({ children }) {
     aboutMe: useRef(null),
     whatIDo: useRef(null),
     resume: useRef(null),
+    portfolio:useRef(null),
     testimonial: useRef(null),
     contact: useRef(null),
   };

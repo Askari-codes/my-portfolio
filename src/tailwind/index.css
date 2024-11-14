@@ -46,6 +46,9 @@
   --text-item-header-hover: var(--color-blue-200);
   --text-icon-social-media-hover: var(--color-gray-400);
   --text-job-title-card-resume: var(--color-gray-700);
+  --text-github-label-card-portfolio: var(--color-gray-700);
+  --text-project-title-card-portfolio: var(--color-blue-700);
+  --text-project-title-card-portfolio-hover:var(--color-blue-500);
   --text-company-card-resume:var(--color-blue-700);
   --text-title-service: var(--color-gray-700);
   --text-job-title-testimonial:var(--color-gray-850);
@@ -56,7 +59,9 @@
   --text-personal-information-about-me:var(--color-gray-850);
   --text-contact-service:var(--color-gray-850);
   --text-dat-resume-card:var(--color-gray-850);
+  --text-title-card-portfolio:var(--color-gray-850);
   --text-content-card-resume:var(--color-gray-700);
+  --text-content-card-portfolio:var(--color-gray-700);
   --text-colleague-name: var(--color-blue-500); 
   --text-content-testimonial:var(--color-gray-700);
   --text-icon-contact-title:var(--color-gray-850);
@@ -142,8 +147,13 @@
     --text-personal-information-about-me:var(--color-gray-100);
     --text-contact-service:var(--color-gray-200);
     --text-dat-resume-card:var(--color-gray-100);
+    --text-title-card-portfolio:var(--color-gray-100);
     --text-job-title-card-resume: var(--color-gray-100);
+    --text-github-label-card-portfolio: var(--color-gray-100);
+    --text-project-title-card-portfolio: var(--color-yellow-600);
+    --text-project-title-card-portfolio-hover: var(--color-yellow-500);
     --text-content-card-resume:var(--color-gray-200);
+    --text-content-card-portfolio:var(--color-gray-200);
     --text-company-card-resume:var(--color-yellow-600);
     --text-icon-social-media-tooltip:var(--color-gray-100);
     --text-label-email-input:var(--color-gray-100);
