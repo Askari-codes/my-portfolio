@@ -13,7 +13,8 @@ function Testimonial() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative font-poppins">
+    
+      <div className="relative font-poppins  ">
       <PageBackground
         pageBackgroundTitle={testimonialContent.pageBackgroundTitle}
         pageTitle={testimonialContent.pageTitle}
@@ -51,6 +52,7 @@ function Testimonial() {
         </Swiper>
       </div>
     </div>
+   
   );
 }
 

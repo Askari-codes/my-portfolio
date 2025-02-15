@@ -6,19 +6,21 @@ import Skills from './Skills';
 
 function Resume() {
     return (
-        <div className="flex flex-col w-full  font-poppins">
+       <div className='flex flex-col justify-center items-center'  >
+         <div className=" mb-10  xl:w-[75%]flex flex-col   font-poppins">
             <div>
                 <PageBackground pageBackgroundTitle={resumeContent.pageBackgroundTitle} pageTitle={resumeContent.pageTitle} />
             </div>
-            <div className="grid p-2  md:grid-cols-[1fr_1fr] gap-4 text-[--text-resume-section-title]">
+            <div className="p-2 text-[--text-resume-section-title]">
                 {resumeContent.sections.map((section, index) => (
-                    <ResumeSection key={index} resumeTitle={section.title} items={section.items} />
+                    <ResumeSection key={index} resumeTitle={section.title} date={section.date} company={section.company} role={section.role}  items={section.items} />
                 ))}
             </div>
             <div>
-                <Skills />
             </div>
         </div>
+                <Skills />
+       </div>
     );
 }
 

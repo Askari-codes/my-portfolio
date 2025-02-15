@@ -217,29 +217,57 @@ export const resumeContent = {
   sections: [
     {
       title: "My Experience",
+     date:'Jun 2022-Sep 2023',
+     company:'Chargoon',
+     role:'Front-end developer',
+
+      items: [
+        {
+          content: `Collaborated with teams to design, develop, and maintain responsive web applications using React JS. Participated in agile processes, including sprint planning and retrospectives. Conducted code reviews and provided feedback to ensure code quality. Integrated RESTful APIs for seamless front-end and back-end communication. Managed state efficiently with Redux and Context API for optimal performance.`,
+        },
+        {
+          content: `Increased team productivity by 20% in completed story points. Reduced bugs by 15%, ensuring better software quality and smoother user experiences. Stayed current with industry trends and best practices. Contributed to overall project success by continuously improving my skills and knowledge, delivering consistently high-quality outcomes for clients and stakeholders.`,
+        },
+        {
+          content: `Utilized React JS, Redux, and Context API to develop scalable web applications. Integrated RESTful APIs to ensure seamless communication between front-end and back-end systems. Worked within agile methodologies, contributing to project delivery. Focused on performance optimization and state management, ensuring smooth and efficient functionality throughout the development process.`,
+        },
+        
+      ],
+    },
+    {
+      title: "My Experience",
+      date:'Jul 2020-May 2022',
+      company:'Lipak',
+      role:'Front-end developer',
+ 
       items: [
         {
           title: "Front-end Developer",
-          company: "Chargoon",
+          company: "Lipak",
           date: "2021-2023",
           content: `Collaborated with teams to design, develop, and maintain responsive web applications using React JS. Participated in agile processes, including sprint planning and retrospectives. Conducted code reviews and provided feedback to ensure code quality. Integrated RESTful APIs for seamless front-end and back-end communication. Managed state efficiently with Redux and Context API for optimal performance.`,
         },
         {
           title: "Front-end Developer",
-          company: "Chargoon",
+          company: "Lipak",
           date: "2021-2023",
           content: `Increased team productivity by 20% in completed story points. Reduced bugs by 15%, ensuring better software quality and smoother user experiences. Stayed current with industry trends and best practices. Contributed to overall project success by continuously improving my skills and knowledge, delivering consistently high-quality outcomes for clients and stakeholders.`,
         },
         {
           title: "Front-end Developer",
-          company: "Chargoon",
+          company: "Lipak",
           date: "2021-2023",
           content: `Utilized React JS, Redux, and Context API to develop scalable web applications. Integrated RESTful APIs to ensure seamless communication between front-end and back-end systems. Worked within agile methodologies, contributing to project delivery. Focused on performance optimization and state management, ensuring smooth and efficient functionality throughout the development process.`,
         },
+        
       ],
     },
     {
       title: "My Education",
+      date:'Dec 2019-Jun 2020',
+      company:'Mapsa',
+      role:'Traineeship',
+ 
       items: [
         {
           title: "Front-end Developer",
