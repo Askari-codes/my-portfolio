@@ -5,9 +5,9 @@ import PageBackground from '../Shared/PageBackground';
 import { HiOutlineDocumentDownload } from 'react-icons/hi';
 
 function AboutMe() {
-    const handleDownload = () => {
-        window.open(RESUME_DOWNLOAD_URL, '_blank');
-    };
+    // const handleDownload = () => {
+    //     window.open(RESUME_DOWNLOAD_URL, '_blank');
+    // };
 
     return (
         <div className='flex justify-center items-center'  >
@@ -37,13 +37,13 @@ function AboutMe() {
                 />
             ))}
         </div>
-        <button
+        {/* <button
             onClick={handleDownload}
             className="flex items-center justify-center max-w-[250px] lg:w-[320px] mt-8 py-3 px-6 text-[12px] xs:text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] bg-[--background-button] text-[--color-gray-900] font-medium rounded-lg shadow-lg hover:bg-[--background-button-hover] hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
         >
             <HiOutlineDocumentDownload className="mr-2 text-xl lg:text-2xl" />
             {aboutMeContent.buttonTitle}
-        </button>
+        </button> */}
     </div>
 </div>
 </div>
