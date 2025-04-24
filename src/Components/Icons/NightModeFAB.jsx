@@ -1,22 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { GiBarbedSun } from "react-icons/gi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import useAppContext from '../../hooks/useAppContext';
 import clsx from 'clsx';
 import {navigationConfig} from '../../Layout/layout'
-import { useEffect } from "react";
 
 function NightModeFAB({type}) {
   
-  const {isDarkMode,setIsDarkMode} = useAppContext();
+  const [isDarkMode,setIsDarkMode] = useState(()=>document.documentElement.classList.contains('dark'))
+ 
   const toggleNightMode = () => {
-    setIsDarkMode(!isDarkMode);
+    const html=document.documentElement
+    const isDark=html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    setIsDarkMode(isDark)
+    
   };
   
-  useEffect(() => {
-    console.log('type',type);
-    
-  }, [type]);
+  
   return (
     <button
       onClick={toggleNightMode}

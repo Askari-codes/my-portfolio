@@ -7,7 +7,6 @@ function AppProvider({ children }) {
   const [activeSection, setActiveSection] = useState(sections[0].id);
   const [isHomeClicked, setIsHomeClicked] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [isDarkMode,setIsDarkMode] = useState(true)
 
   const scrollContainerRef = useRef(null);
 
@@ -41,8 +40,6 @@ function AppProvider({ children }) {
         isScrolling,
         setIsScrolling,
         scrollContainerRef, 
-        isDarkMode,
-        setIsDarkMode
       }}
     >
       {children}

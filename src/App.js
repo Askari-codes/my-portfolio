@@ -9,7 +9,6 @@ function App() {
   const {
     isOpen,
     closeMenu,
-    isDarkMode,
     sectionRefs,
     activeSection,
     setActiveSection,
@@ -91,11 +90,10 @@ function App() {
     <div
     
       onClick={handleClick}
-      className={clsx(
-        'relative w-full h-screen bg-[--background-application] ',
-        {'dark':isDarkMode},
-        {'':!isDarkMode}
-      )}
+      className=
+        'relative w-full h-screen bg-[--background-application] dark:dark '
+        
+      
     >
     
       <div className="w-frll h-full lg:grid lg:h-full lg:grid-cols-[250px_1fr]">
